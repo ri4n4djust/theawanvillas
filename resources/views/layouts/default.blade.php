@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
+
+<head>
+@include('includes.head')
+@yield('meta')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+@yield('media')
+
+<style type="text/css">
+    @font-face {
+        font-family: MAIAN;
+        src: url('{{ public_path('fonts/MAIAN.TTF') }}') format('truetype');
+    }
+</style>
+</head>
+
+
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+      <div id="status" class="la-ball-triangle-path">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+  </div>
+  <!--End of Preloader-->
+
+  <!-- <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+      <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+      <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+      <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+      <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+  </div> -->
+
+  <div id="wrapper">
+    <!-- ======= Header ======= -->
+    @include('includes.headmenu')
+
+    <main id="content">
+      <!-- @include('pages.notification') -->
+      <!-- ======= About Section ======= -->
+      @yield('content')
+      @yield('scripts')
+      <div class="popup-container" id="popupContainer">
+            <a href="https://api.whatsapp.com/send?phone=62818688114&text=&source=&data=" class="whatsApp" target="_blank"><i class="fa fa-whatsapp my-whatsApp"></i></a>
+            <div class="popup-content" id="popupContent">
+                <img src="{{asset('assets/images/wa.png')}}" /><br />
+                Scan Me
+            </div>
+        </div>
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="landing-footer" class="clearfix">
+    @include('includes.footer')
+
+    </footer><!-- End Footer -->
+    <!-- End Footer -->
+ 
+  </div>
+  @include('includes.footerjs')
+
+</body>
+
+</html>
