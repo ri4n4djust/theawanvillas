@@ -237,6 +237,12 @@ section {
     padding: 20px 0;
     position: relative;
 }
+.row-maps {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+}
 
 .tengah {
     text-align: center;
@@ -262,7 +268,7 @@ section {
 
 [class*='col-'] {
     float: left;
-    padding: 20px;
+    padding: 2px;
 }
 
 #clients .col-2-3 [class*='col-'] {
@@ -428,8 +434,9 @@ section {
 /*Style*/
 
 .button {
+    font-family: MAIAN;
     font-size: 16px;
-    margin: 35px 0;
+    margin: 5px 0;
     padding: 11px 16px;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
@@ -1450,8 +1457,7 @@ blockquote {
 .client-overlay {
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top;
-    0;
+    top:0;
     right: 0;
     bottom: 0;
     left: 0;
@@ -1477,6 +1483,118 @@ blockquote {
     display: inline-block;
 }
 
+/* --------- 6.6 villas ---------- */
+
+#villas {
+    display: block;
+    text-align: center;
+    position: relative;
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
+    /* color: #fff; */
+    font-family: MAIAN;
+    background-color:#f0f0f0;
+}
+.box-villas {
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 10px;
+    background-color:#fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
+}
+#villas img {
+    display: inline-block;
+    /* padding: 15px 25px; */
+    /* max-width: 40%; */
+}
+
+.villas-overlay {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+#villas a:hover .villas-overlay {
+    opacity: 1;
+}
+
+.villas-overlay span {
+    position: absolute;
+    top: 48%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+/* --------- 6.6 maps ---------- */
+
+#maps {
+    display: block;
+    text-align: center;
+    position: relative;
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
+    /* color: #fff; */
+    font-family: MAIAN;
+    background-color:#f0f0f0;
+}
+.box-maps {
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 10px;
+    background-color:#fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
+}
+#maps img {
+    display: inline-block;
+    /* padding: 15px 25px; */
+    /* max-width: 40%; */
+}
+
+.maps-overlay {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+#maps a:hover .maps-overlay {
+    opacity: 1;
+}
+
+.maps-overlay span {
+    position: absolute;
+    top: 48%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
 /* --------- 6.7 Pricing Table ---------- */
 
 .pricing-block-content {
@@ -1491,11 +1609,11 @@ blockquote {
 
 .pricing-block ul {
     list-style: none;
-    margin: 25px 0 25px 0;
+    margin: 5px 0 5px 0;
 }
 
 .pricing-block li {
-    padding: 14px 0;
+    padding: 3px 0;
     border-bottom: 1px dotted #e1e1e1;
 }
 
@@ -1512,14 +1630,14 @@ blockquote {
 .pricing-sub {
     font-style: italic;
     color:#ccc;
-    margin:0 0 25px 0;
+    margin:0 0 5px 0;
 }
 
 /*Price*/
 
 .pricing {
     background: #f5f5f5;
-    padding: 25px;
+    padding: 5px;
     position: relative;
 }
 
@@ -2162,7 +2280,7 @@ blockquote {
     position: absolute;
     /* top: 100%; */
     left: 0;
-    background-color:#009bf8;
+    background-color:#0b82cc;
     /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
     /* z-index: 1; */
     
@@ -2193,7 +2311,7 @@ blockquote {
     display: block;
 }
 
-@media (max-width: 1024px) {
+@media all and (max-width: 1024px) {
     #nav-main {
         display: none;
     }
@@ -2205,7 +2323,7 @@ blockquote {
 
     #nav-mobile {
         display: none;
-        background-color: #333;
+        /* background-color: #333; */
         position: absolute;
         /* top: 50px; */
         width: 100%;
@@ -2262,7 +2380,7 @@ blockquote {
 
     #header aside {
         display: none;
-    }
+    }   
 }
 
 @media all and (min-width: 1025px) {

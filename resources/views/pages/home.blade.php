@@ -24,6 +24,40 @@
   </div>
 </section>
 
+<!--Villa-->
+<section id="villas" class="scrollto clearfix">
+  <div class="row clearfix">
+
+      <div class="col-2">
+
+          <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+              <h2 style="font-family:'MAIAN';">Single Bed Villa</h2>
+              <p >Villas and Spa features 19 beautifully appointed 1 Bedroom Exclusive Pool Villa, each including complimentary bottled water, 
+                balcony/terrace, air conditioning, hair dryer, complimentary Wi-Fi, separate shower and tub.
+                The Hotel’srecreational facilities, which include massage, spa, garden, indoor pool are designed for escape and relaxation.</p>
+              <a href="#" class="button">More Details</a>
+              <img src="{{asset('assets/images/gallery-images/gallery-image-1.jpg')}}" alt="Landing Page"/>
+          </div>
+          
+      </div>
+
+      <div class="col-2">
+
+          <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+              <h2 style="font-family:'MAIAN';">Double Bed</h2>
+              <p >Villas and Spa features 19 beautifully appointed 1 Bedroom Exclusive Pool Villa, each including complimentary bottled water, 
+                balcony/terrace, air conditioning, hair dryer, complimentary Wi-Fi, separate shower and tub.
+                The Hotel’srecreational facilities, which include massage, spa, garden, indoor pool are designed for escape and relaxation.</p>
+              <a href="#" class="button">More Details</a>
+              <img src="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" alt="Landing Page"/>
+          </div>
+          
+      </div>
+
+  </div>
+</section>
+<!--End of Villa-->
+
 <!--Introduction-->
 <section id="about" class="introduction scrollto">
 
@@ -218,7 +252,7 @@
   <!--End of Content Section-->
 
 
-  <!--Clients-->
+<!--Clients-->
 <section id="clients" class="scrollto clearfix">
   <div class="row clearfix">
 
@@ -277,74 +311,177 @@
           <h2 class="section-title">We have the right package for you</h2>
       </div>
 
-      <!--Pricing Block-->
-      <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
-          <div class="pricing-block-content">
-              <h3>Honeymoon Package</h3>
-              <p class="pricing-sub">Romantic honeymoon</p>
-              <div class="pricing">
-                  <!-- <div class="price"><span>$</span>19</div> -->
-                  <img src="{{asset('assets/images/gallery-images/gallery-image-9.jpg')}}" alt="Landing Page"/>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-              </div>
-              <ul>
-                  <li>2 Night with one time setup bed</li>
-                  <li>2 with breakfast</li>
-                  <li>one time romantic candilac diner</li>
-                  <li>one time lunch pool</li>
-                  <li>1 year free updates</li>
-              </ul>
-              <a href="#" class="button">BOOK TODAY</a>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <!--Pricing Block-->
+            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                <div class="pricing-block-content">
+                    <h3>Honeymoon Package</h3>
+                    <p class="pricing-sub">Romantic honeymoon</p>
+                    <div class="pricing">
+                        <!-- <div class="price"><span>$</span>19</div> -->
+                        <img src="{{asset('assets/images/gallery-images/gallery-image-9.jpg')}}" alt="Landing Page"/>
+                    </div>
+                    <ul>
+                        <li>2 Night with one time setup bed</li>
+                        <li>2 with breakfast</li>
+                        <li>one time romantic candilac diner</li>
+                        <li>one time lunch pool</li>
+                        <li>1 year free updates</li>
+                    </ul>
+                    <a href="#" class="button">BOOK TODAY</a>
+                </div>
+            </div>
+            <!--End Pricing Block-->
           </div>
-      </div>
-      <!--End Pricing Block-->
-
-      <!--Pricing Block-->
-      <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
-          <div class="pricing-block-content">
-              <h3>Family Package</h3>
-              <p class="pricing-sub">Romantic honeymoon</p>
-              <div class="pricing">
-                  <!-- <div class="price"><span>$</span>19</div> -->
-                  <img src="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" alt="Landing Page"/>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-              </div>
-              <ul>
-                  <li>2 Night with one time setup bed</li>
-                  <li>2 with breakfast</li>
-                  <li>one time romantic candilac diner</li>
-                  <li>one time lunch pool</li>
-                  <li>1 year free updates</li>
-              </ul>
-              <a href="#" class="button">BOOK TODAY</a>
+          <div class="swiper-slide">
+            <!--Pricing Block-->
+            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                <div class="pricing-block-content">
+                    <h3>Family Package</h3>
+                    <p class="pricing-sub">Romantic honeymoon</p>
+                    <div class="pricing">
+                        <!-- <div class="price"><span>$</span>19</div> -->
+                        <img src="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" alt="Landing Page"/>
+                    </div>
+                    <ul>
+                        <li>2 Night with one time setup bed</li>
+                        <li>2 with breakfast</li>
+                        <li>one time romantic candilac diner</li>
+                        <li>one time lunch pool</li>
+                        <li>1 year free updates</li>
+                    </ul>
+                    <a href="#" class="button">BOOK TODAY</a>
+                </div>
+            </div>
+            <!--End Pricing Block-->
           </div>
-      </div>
-      <!--End Pricing Block-->
-
-      <!--Pricing Block-->
-      <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
-          <div class="pricing-block-content">
-              <h3>Couple Package</h3>
-              <p class="pricing-sub">Romantic honeymoon</p>
-              <div class="pricing">
-                  <!-- <div class="price"><span>$</span>19</div> -->
-                  <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-              </div>
-              <ul>
-                  <li>2 Night with one time setup bed</li>
-                  <li>2 with breakfast</li>
-                  <li>one time romantic candilac diner</li>
-                  <li>one time lunch pool</li>
-                  <li>1 year free updates</li>
-              </ul>
-              <a href="#" class="button">BOOK TODAY</a>
+          <div class="swiper-slide">
+            <!--Pricing Block-->
+            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                <div class="pricing-block-content">
+                    <h3>Couple Package</h3>
+                    <p class="pricing-sub">Romantic honeymoon</p>
+                    <div class="pricing">
+                        <!-- <div class="price"><span>$</span>19</div> -->
+                        <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>
+                    </div>
+                    <ul>
+                        <li>2 Night with one time setup bed</li>
+                        <li>2 with breakfast</li>
+                        <li>one time romantic candilac diner</li>
+                        <li>one time lunch pool</li>
+                        <li>1 year free updates</li>
+                    </ul>
+                    <a href="#" class="button">BOOK TODAY</a>
+                </div>
+            </div>
+            <!--End Pricing Block--> 
           </div>
+          <div class="swiper-slide">
+            <!--Pricing Block-->
+            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                <div class="pricing-block-content">
+                    <h3>Couple Package</h3>
+                    <p class="pricing-sub">Romantic honeymoon</p>
+                    <div class="pricing">
+                        <!-- <div class="price"><span>$</span>19</div> -->
+                        <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>
+                    </div>
+                    <ul>
+                        <li>2 Night with one time setup bed</li>
+                        <li>2 with breakfast</li>
+                        <li>one time romantic candilac diner</li>
+                        <li>one time lunch pool</li>
+                        <li>1 year free updates</li>
+                    </ul>
+                    <a href="#" class="button">BOOK TODAY</a>
+                </div>
+            </div>
+            <!--End Pricing Block--> 
+          </div>
+          <div class="swiper-slide">
+            <!--Pricing Block-->
+            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                <div class="pricing-block-content">
+                    <h3>Couple Package</h3>
+                    <p class="pricing-sub">Romantic honeymoon</p>
+                    <div class="pricing">
+                        <!-- <div class="price"><span>$</span>19</div> -->
+                        <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>
+                    </div>
+                    <ul>
+                        <li>2 Night with one time setup bed</li>
+                        <li>2 with breakfast</li>
+                        <li>one time romantic candilac diner</li>
+                        <li>one time lunch pool</li>
+                        <li>1 year free updates</li>
+                    </ul>
+                    <a href="#" class="button">BOOK TODAY</a>
+                </div>
+            </div>
+            <!--End Pricing Block--> 
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <!-- <div class="swiper-button-next"></div> -->
+        <!-- <div class="swiper-button-prev"></div> -->
       </div>
-      <!--End Pricing Block-->
+      <script>
+        var swiper = new Swiper('.swiper-container', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+          1920: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+        });
+      </script>
 
   </div>
 </section>
+
+<!--maps-->
+<section id="maps" class="scrollto clearfix">
+  <div class="row-maps clearfix">
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.1950637291725!2d115.15047537590551!3d-8.672991588291344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2476d6fd93ac5%3A0x336afb89db0054f2!2sThe%20Awan%20Villas!5e0!3m2!1sid!2sid!4v1737874401447!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </div>
+</section>
+<!--End of maps-->
    
 
 @stop

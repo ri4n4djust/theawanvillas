@@ -47,7 +47,7 @@
                 <!--Main Navigation-->
                 <nav id="nav-main">
                     <ul>
-                        <li id="home"><a  href="index.php">Home</a></li>
+                        <li ><a  href="/">Home</a></li>
                         <li ><a  href="/villas">VILLAS</a></li>
                         <li >
                             <a href="#">DINING</a>
@@ -57,7 +57,7 @@
                             </ul>
                         </li>
                         <li ><a  href="/gallery">GALLERY</a></li>
-                        <li >
+                        <li class="dropdown-menu">
                             <a href="#">SPECIAL OFFERS</a>
                             <ul>
                                 <li><a id="spesial" href="honemoon.php">Honeymoon Package</a></li>
