@@ -26,17 +26,17 @@
                     <ul class="social-icons">
                         <li>
                             <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
-                                <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
+                                <i class="fa fa-facebook fa-3x"></i><span>Facebook</span>
                             </a>
                         </li>
                         <li>
                             <a target="_blank" title="Twitter" href="http://www.twitter.com/username">
-                                <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
+                                <i class="fa fa-twitter fa-3x"></i><span>Twitter</span>
                             </a>
                         </li>
                         <li>
                             <a target="_blank" title="Instagram" href="http://www.instagram.com/username">
-                                <i class="fa fa-instagram fa-1x"></i><span>Instagram</span>
+                                <i class="fa fa-instagram fa-3x"></i><span>Instagram</span>
                             </a>
                         </li>
                     </ul>
@@ -48,13 +48,15 @@
                 <nav id="nav-main">
                     <ul>
                         <li ><a  href="/">Home</a></li>
-                        <li ><a  href="/villas">VILLAS</a></li>
                         <li >
-                            <a href="#">DINING</a>
+                            <a  href="/villas">VILLAS</a>
                             <ul>
-                                <li><a href="dining.php">Restaurant</a></li>
-                                <li><a href="dining.php">Bar</a></li>
+                                <li><a href="/single">Single</a></li>
+                                <li><a href="/double">Double</a></li>
                             </ul>
+                        </li>
+                        <li >
+                            <a href="/dining">DINING</a>
                         </li>
                         <li ><a  href="/gallery">GALLERY</a></li>
                         <li class="dropdown-menu">
@@ -83,7 +85,7 @@
         <div class="col-38">
 
             <div class="section-heading">
-                <h1>Bali Awan Villas</h1>
+                <h1 style="font-family:'MAIAN';">Bali Awan Villas</h1>
                 <h2>- Best Place To Stay In bali -</h2>
             </div>
 
