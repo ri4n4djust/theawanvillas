@@ -24,7 +24,4 @@
             ('mouseout', function () {
                 popupContent.style.display = 'none';
         });
-        document.getElementById("home").onclick = function () {
-        location.href = "index.php";
-    };
 </script>
