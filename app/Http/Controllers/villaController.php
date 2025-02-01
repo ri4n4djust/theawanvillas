@@ -13,16 +13,55 @@ class villaController extends Controller
 
         return view('pages.home');
     }
-    public function villas(){
+    public function oneBedroom(){
 
         // var_dump($kamar[0]->foto);
 
-        return view('pages.villas');
+        return view('pages.one-bedroom');
+    }
+    public function twoBedroom(){
+
+        // var_dump($kamar[0]->foto);
+
+        return view('pages.two-bedroom');
+    }
+    public function dining(){
+
+        // var_dump($kamar[0]->foto);
+
+        return view('pages.dinning');
     }
     public function gallery(){
 
         // var_dump($kamar[0]->foto);
 
-        return view('pages.galeri');
+        return view('pages.gallery');
     }
+
+    //=========special offers
+    public function lastMinute(){
+
+        return view('pages.last-minute');
+    }
+    public function hotDeals(){
+
+        return view('pages.hot-deals');
+    }
+    public function earlyBird(){
+
+        return view('pages.early-bird');
+    }
+    public function twoNightHoneymoon(){
+
+        return view('pages.two-night-honeymoon');
+    }
+    public function threeNightHoneymoon(){
+
+        return view('pages.three-night-honeymoon');
+    }
+    public function familyPackage(){
+
+        return view('pages.family-package');
+    }
+
 }

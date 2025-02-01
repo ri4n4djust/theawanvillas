@@ -55,9 +55,10 @@ a:hover, #header.nav-solid nav a:hover {
 
 #header nav a, #header i {
     color:#fff;
-    font-size:medium;
+    font-size:14px;
     font-weight: bold;
 }
+
 
 
 /* Navigation Colors when the Navigation is sticky and solid */ 

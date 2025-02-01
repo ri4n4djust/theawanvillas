@@ -31,7 +31,7 @@
       <div class="col-2">
 
           <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-              <h2 style="font-family:'MAIAN';">Single Bed Villa</h2>
+              <h2 style="font-family:'MAIAN';">One Bed Room</h2>
               <p >Villas and Spa features 19 beautifully appointed 1 Bedroom Exclusive Pool Villa, each including complimentary bottled water, 
                 balcony/terrace, air conditioning, hair dryer, complimentary Wi-Fi, separate shower and tub.
                 The Hotel’srecreational facilities, which include massage, spa, garden, indoor pool are designed for escape and relaxation.</p>
@@ -44,7 +44,7 @@
       <div class="col-2">
 
           <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-              <h2 style="font-family:'MAIAN';">Double Bed</h2>
+              <h2 style="font-family:'MAIAN';">Two Bed Room</h2>
               <p >Villas and Spa features 19 beautifully appointed 1 Bedroom Exclusive Pool Villa, each including complimentary bottled water, 
                 balcony/terrace, air conditioning, hair dryer, complimentary Wi-Fi, separate shower and tub.
                 The Hotel’srecreational facilities, which include massage, spa, garden, indoor pool are designed for escape and relaxation.</p>

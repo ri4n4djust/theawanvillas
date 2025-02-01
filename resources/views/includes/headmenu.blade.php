@@ -1,5 +1,5 @@
 @php $gmbr = "" ; @endphp
-<header id="banner" class="scrollto clearfix" data-zs-src='["{{asset("assets")}}/images/banner-images/banner-image-1.jpg", "{{asset("assets")}}/images/banner-images/banner-image-2.jpg", "{{asset("assets")}}/images/banner-images/banner-image-3.jpg", "{{asset("assets")}}/images/banner-images/banner-image-4.jpg"]' >
+<header id="banner" class="scrollto clearfix" data-zs-src='["{{asset("assets")}}/images/banner-images/banner-image-1.jpg", "{{asset("assets")}}/images/banner-images/banner-image-2.jpg", "{{asset("assets")}}/images/banner-images/banner-image-3.jpg", "{{asset("assets")}}/images/banner-images/banner-image-4.jpg", "{{asset("assets")}}/images/banner-images/banner-image-5.jpg", "{{asset("assets")}}/images/banner-images/banner-image-6.jpg", "{{asset("assets")}}/images/banner-images/banner-image-7.jpg"]' >
 
     <div id="header" class="nav-collapse">
         <div class="row clearfix">
@@ -49,23 +49,25 @@
                     <ul>
                         <li ><a  href="/">Home</a></li>
                         <li >
-                            <a  href="/villas">VILLAS</a>
+                            <a  href="#">VILLAS</a>
                             <ul>
-                                <li><a href="/single">Single</a></li>
-                                <li><a href="/double">Double</a></li>
+                                <li><a href="/one-bedroom">One Bed Room</a></li>
+                                <li><a href="/two-bedroom">Two Bed Room</a></li>
                             </ul>
                         </li>
                         <li >
                             <a href="/dining">DINING</a>
                         </li>
                         <li ><a  href="/gallery">GALLERY</a></li>
-                        <li class="dropdown-menu">
+                        <li>
                             <a href="#">SPECIAL OFFERS</a>
                             <ul>
-                                <li><a id="spesial" href="honemoon.php">Honeymoon Package</a></li>
-                                <li><a href="dining.php">Family Package</a></li>
-                                <li><a id="spesial" href="honemoon.php">Honeymoon Package</a></li>
-                                <li><a href="dining.php">Family Package</a></li>
+                                <li><a href="/last-minute">Last Minute Deals</a></li>
+                                <li><a href="/hot-deals">Hot Deals</a></li>
+                                <li><a href="/early-bird">Early Bird</a></li>
+                                <li><a href="/two-night-honeymoon">2 Nights Honeymoon Package</a></li>
+                                <li><a href="/three-night-honeymoon">3 Nights Honeymoon Package</a></li>
+                                <li><a href="/family-package">Family Package</a></li>
                             </ul>
                         </li>
                     </ul>
