@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
+
 
 Route::get('/', [App\Http\Controllers\villaController::class , 'home']);
 
@@ -17,3 +20,43 @@ Route::get('/two-night-honeymoon', [App\Http\Controllers\villaController::class 
 Route::get('/three-night-honeymoon', [App\Http\Controllers\villaController::class , 'threeNightHoneymoon']);
 Route::get('/family-package', [App\Http\Controllers\villaController::class , 'familyPackage']);
 
+Route::get('/sitemap', function(){
+    $sitemap = Sitemap::create()
+    ->add(Url::create('/one-bedroom'))
+    ->add(Url::create('/two-bedroom'))
+    ->add(Url::create('/dining'))
+    ->add(Url::create('/gallery'))
+    ->add(Url::create('/last-minute'))
+    ->add(Url::create('/hot-deals'))
+    ->add(Url::create('/early-bird'))
+    ->add(Url::create('/two-night-honeymoon'))
+    ->add(Url::create('/three-night-honeymoon'))
+    ->add(Url::create('/family-package'));
+    $sitemap->writeToFile(public_path('sitemap.xml'));
+   
+    // $book = Booking::all();
+    // foreach ($book as $book) {
+    //     $sitemap->add(Url::create("/bookings/{$book->slug}"));
+    // }
+    // $sitemap->writeToFile(public_path('sitemap.xml'));
+
+    // $activities = DB::table('activities')->get();
+    // foreach ($activities as $act) {
+    //     $sitemap->add(Url::create("/activities/{$act->slug}"));
+    // }
+    // $sitemap->writeToFile(public_path('sitemap.xml'));
+
+    // $destinasi = DB::table('destinations')->get();
+    // foreach ($destinasi as $des) {
+    //     $sitemap->add(Url::create("/destinations/{$des->slug}"));
+    // }
+    // $sitemap->writeToFile(public_path('sitemap.xml'));
+
+    // $tour = TourPackage::all();
+    // foreach ($tour as $tur) {
+    //     $sitemap->add(Url::create("/tour_packages/{$tur->slug}"));
+    // }
+    
+
+    
+}); 
