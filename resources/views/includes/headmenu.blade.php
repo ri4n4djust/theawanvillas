@@ -58,6 +58,7 @@
                         <li >
                             <a href="/dining">DINING</a>
                         </li>
+                        <li ><a  href="/spa">SPA</a></li>
                         <li ><a  href="/gallery">GALLERY</a></li>
                         <li>
                             <a href="#">SPECIAL OFFERS</a>

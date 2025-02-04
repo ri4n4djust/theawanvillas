@@ -63,5 +63,9 @@ class villaController extends Controller
 
         return view('pages.family-package');
     }
+//=========admin
+    public function adminGallery(){
 
+        return view('admin.pages.admin-gallery');
+    }   
 }

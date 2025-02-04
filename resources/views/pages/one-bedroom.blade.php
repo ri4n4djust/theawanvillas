@@ -52,7 +52,47 @@
     <!--End Content Right Side-->
 
     <div class="col-2 wow fadeInRight">
-        <img src="{{asset('assets/images/dining.jpg')}}" alt="Dancer"/>
+        <div class="row clearfix">
+
+            <div class="col-2-3">
+                
+                <div class="section-heading">
+                    <h2 class="section-title">Best Villa Facilities</h2>
+                    <p class="section-subtitle">Some of ouf villa Facilities</p>
+                </div>
+
+                <a href="#" class="col-3">
+                    <img src="{{asset('assets/images/icon/pool.png')}}" wi alt="Company"/>
+                    <div class="client-overlay"><span>Private Pool Size: 7m x 3m x 1,5m</span></div>
+                </a>
+                <a href="#" class="col-3">
+                <img src="{{asset('assets/images/icon/desk.png')}}" alt="Company"/>
+                    <div class="client-overlay"><span>24Hour Front Office</span></div>
+                </a>
+                <a href="#" class="col-3">
+                <img src="{{asset('assets/images/icon/wifi.png')}}" alt="Pool"/>
+                    <div class="client-overlay"><span>High Spped Wifi</span></div>
+                </a>
+                <a href="#" class="col-3">
+                <img src="{{asset('assets/images/icon/villa.png')}}" alt="Pool"/>
+                    <div class="client-overlay"><span>High Spped Wifi</span></div>
+                </a>
+                <a href="#" class="col-3">
+                <img src="{{asset('assets/images/icon/plug.png')}}" alt="Pool"/>
+                    <div class="client-overlay"><span>High Spped Wifi</span></div>
+                </a>
+                <a href="#" class="col-3">
+                <img src="{{asset('assets/images/icon/bed.png')}}" alt="Pool"/>
+                    <div class="client-overlay"><span>High Spped Wifi</span></div>
+                </a>
+                <a href="#" class="col-3">
+                <img src="{{asset('assets/images/icon/door.png')}}" alt="Pool"/>
+                    <div class="client-overlay"><span>High Spped Wifi</span></div>
+                </a>
+
+            </div>
+
+        </div>
     </div>
 
 </div>
@@ -63,9 +103,8 @@
 
 
   <!--Gallery-->
-<aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
-      data-featherlight-filter="a">
-      <div class="tengah">
+<aside id="gallery" class="row scrollto clearfix" data-featherlight-gallery data-featherlight-filter="a">
+      <div >
           <div class="section-heading">
               <h2 style="font-family:'MAIAN';font-weight: bold;">- Foto Gallery -</h2>
           </div>
