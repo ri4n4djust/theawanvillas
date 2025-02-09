@@ -66,6 +66,6 @@ class villaController extends Controller
 //=========admin
     public function adminGallery(){
 
-        return view('admin.pages.admin-gallery');
+        return view('admin.admin-gallery');
     }   
 }

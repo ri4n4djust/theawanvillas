@@ -15,10 +15,34 @@
       <div class="col-1">
 
           <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-              <h2 style="font-family:'MAIAN';">One Bed Room</h2>
-              <p >Villas and Spa features 19 beautifully appointed 1 Bedroom Exclusive Pool Villa, each including complimentary bottled water, 
+                <h2 style="font-family:'MAIAN';">One Bed Room</h2>
+                <p >Villas and Spa features 19 beautifully appointed 1 Bedroom Exclusive Pool Villa, each including complimentary bottled water, 
                 balcony/terrace, air conditioning, hair dryer, complimentary Wi-Fi, separate shower and tub.
                 The Hotel’srecreational facilities, which include massage, spa, garden, indoor pool are designed for escape and relaxation.</p>
+                <div class="col-3">
+                    <img src="{{asset('assets/images/icon/pool.png')}}" alt="Company"/><br>
+                    <span>Private Pool Size: 7m x 3m x 1,5m</span>
+                </div>
+                <div class="col-3">
+                <img src="{{asset('assets/images/icon/wifi.png')}}" alt="Pool"/><br>
+                    <span>High Spped Wifi</span>
+                </div>
+                <div class="col-3">
+                <img src="{{asset('assets/images/icon/villa.png')}}" alt="Pool"/><br>
+                    <span>High Spped Wifi</span>
+                </div>
+                <div class="col-3">
+                <img src="{{asset('assets/images/icon/plug.png')}}" alt="Pool"/><br>
+                    <span>High Spped Wifi</span>
+                </div>
+                <div class="col-3">
+                <img src="{{asset('assets/images/icon/bed.png')}}" alt="Pool"/><br>
+                    <span>High Spped Wifi</span>
+                </div>
+                <div class="col-3">
+                <img src="{{asset('assets/images/icon/door.png')}}" alt="Pool"/><br>
+                    <span>High Spped Wifi</span>
+                </div>
           </div>
           
       </div>
@@ -43,10 +67,10 @@
     <!--Content of the Right Side-->
     <div class="col-2 wow fadeInLeft">
         <div class="section-heading">
-            <h3>- Dining</h3>
             <h2 class="section-title">In Villa Romantic Candle Light Dinner</h2>
             <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+            
         </div>
     </div>
     <!--End Content Right Side-->
@@ -54,43 +78,22 @@
     <div class="col-2 wow fadeInRight">
         <div class="row clearfix">
 
-            <div class="col-2-3">
-                
-                <div class="section-heading">
-                    <h2 class="section-title">Best Villa Facilities</h2>
-                    <p class="section-subtitle">Some of ouf villa Facilities</p>
-                </div>
-
-                <a href="#" class="col-3">
-                    <img src="{{asset('assets/images/icon/pool.png')}}" wi alt="Company"/>
-                    <div class="client-overlay"><span>Private Pool Size: 7m x 3m x 1,5m</span></div>
-                </a>
-                <a href="#" class="col-3">
-                <img src="{{asset('assets/images/icon/desk.png')}}" alt="Company"/>
-                    <div class="client-overlay"><span>24Hour Front Office</span></div>
-                </a>
-                <a href="#" class="col-3">
-                <img src="{{asset('assets/images/icon/wifi.png')}}" alt="Pool"/>
-                    <div class="client-overlay"><span>High Spped Wifi</span></div>
-                </a>
-                <a href="#" class="col-3">
-                <img src="{{asset('assets/images/icon/villa.png')}}" alt="Pool"/>
-                    <div class="client-overlay"><span>High Spped Wifi</span></div>
-                </a>
-                <a href="#" class="col-3">
-                <img src="{{asset('assets/images/icon/plug.png')}}" alt="Pool"/>
-                    <div class="client-overlay"><span>High Spped Wifi</span></div>
-                </a>
-                <a href="#" class="col-3">
-                <img src="{{asset('assets/images/icon/bed.png')}}" alt="Pool"/>
-                    <div class="client-overlay"><span>High Spped Wifi</span></div>
-                </a>
-                <a href="#" class="col-3">
-                <img src="{{asset('assets/images/icon/door.png')}}" alt="Pool"/>
-                    <div class="client-overlay"><span>High Spped Wifi</span></div>
-                </a>
-
-            </div>
+        <a href="{{asset('assets/images/gallery-images/gallery-image-1.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
+        data-wow-delay="0.1s">
+        <img src="{{asset('assets/images/gallery-images/gallery-image-1.jpg')}}" alt="Landing Page"/>
+        </a>
+        <a href="{{asset('assets/images/gallery-images/gallery-image-2.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
+            data-wow-delay="0.3s">
+            <img src="{{asset('assets/images/gallery-images/gallery-image-2.jpg')}}" alt="Landing Page"/>
+        </a>
+        <a href="{{asset('assets/images/gallery-images/gallery-image-3.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
+            data-wow-delay="0.5s">
+            <img src="{{asset('assets/images/gallery-images/gallery-image-3.jpg')}}" alt="Landing Page"/>
+        </a>
+        <a href="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
+            data-wow-delay="1.1s">
+            <img src="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" alt="Landing Page"/>
+        </a>
 
         </div>
     </div>
@@ -101,86 +104,6 @@
 </div>
 <!--End of Content Section-->
 
-
-  <!--Gallery-->
-<aside id="gallery" class="row scrollto clearfix" data-featherlight-gallery data-featherlight-filter="a">
-      <div >
-          <div class="section-heading">
-              <h2 style="font-family:'MAIAN';font-weight: bold;">- Foto Gallery -</h2>
-          </div>
-
-      </div>
-
-      <a href="{{asset('assets/images/gallery-images/gallery-image-1.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
-        data-wow-delay="0.1s">
-        <img src="{{asset('assets/images/gallery-images/gallery-image-1.jpg')}}" alt="Landing Page"/>
-      </a>
-      <a href="{{asset('assets/images/gallery-images/gallery-image-2.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
-        data-wow-delay="0.3s">
-        <img src="{{asset('assets/images/gallery-images/gallery-image-2.jpg')}}" alt="Landing Page"/>
-      </a>
-      <a href="{{asset('assets/images/gallery-images/gallery-image-3.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
-        data-wow-delay="0.5s">
-        <img src="{{asset('assets/images/gallery-images/gallery-image-3.jpg')}}" alt="Landing Page"/>
-      </a>
-      <a href="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
-        data-wow-delay="1.1s">
-        <img src="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" alt="Landing Page"/>
-      </a>
-
-</aside>
-  <!--End of Gallery-->
-
-
-<!--Clients-->
-<!-- <section id="clients" class="scrollto clearfix">
-  <div class="row clearfix">
-
-      <div class="col-3">
-
-          <div class="section-heading">
-              <h2 class="section-title">Best Villa Facilities</h2>
-              <p class="section-subtitle">Some of ouf villa Facilities</p>
-          </div>
-
-      </div>
-
-      <div class="col-2-3">
-
-          <a href="#" class="col-3">
-              <img src="{{asset('assets/images/icon/pool.png')}}" wi alt="Company"/>
-              <div class="client-overlay"><span>Private Pool Size: 7m x 3m x 1,5m</span></div>
-          </a>
-          <a href="#" class="col-3">
-          <img src="{{asset('assets/images/icon/desk.png')}}" alt="Company"/>
-              <div class="client-overlay"><span>24Hour Front Office</span></div>
-          </a>
-          <a href="#" class="col-3">
-          <img src="{{asset('assets/images/icon/wifi.png')}}" alt="Pool"/>
-              <div class="client-overlay"><span>High Spped Wifi</span></div>
-          </a>
-          <a href="#" class="col-3">
-          <img src="{{asset('assets/images/icon/villa.png')}}" alt="Pool"/>
-              <div class="client-overlay"><span>High Spped Wifi</span></div>
-          </a>
-          <a href="#" class="col-3">
-          <img src="{{asset('assets/images/icon/plug.png')}}" alt="Pool"/>
-              <div class="client-overlay"><span>High Spped Wifi</span></div>
-          </a>
-          <a href="#" class="col-3">
-          <img src="{{asset('assets/images/icon/bed.png')}}" alt="Pool"/>
-              <div class="client-overlay"><span>High Spped Wifi</span></div>
-          </a>
-          <a href="#" class="col-3">
-          <img src="{{asset('assets/images/icon/door.png')}}" alt="Pool"/>
-              <div class="client-overlay"><span>High Spped Wifi</span></div>
-          </a>
-
-      </div>
-
-  </div>
-</section> -->
-  <!--End of Clients-->
 
 
 
