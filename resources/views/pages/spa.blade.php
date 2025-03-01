@@ -14,7 +14,7 @@
       data-featherlight-filter="a">
       <div class="tengah">
           <div class="section-heading">
-              <h2 style="font-family:'MAIAN';font-weight: bold;">- Foto Gallery -</h2>
+              <h2 style="font-family:'MAIAN';font-weight: bold;">- Spa -</h2>
           </div>
 
       </div>

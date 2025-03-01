@@ -61,35 +61,35 @@
 <!--Content Section-->
 <div id="services" class="scrollto clearfix">
 
-<div class="row no-padding-bottom clearfix">
+  <div class="row no-padding-bottom clearfix">
 
-    <div class="tengah">
-        <div class="section-heading">
-            <h2 style="font-family:'MAIAN';font-weight: bold;"></h2>
-        </div>
+      <div class="tengah">
+          <div class="section-heading">
+              <h2 style="font-family:'MAIAN';font-weight: bold;"></h2>
+          </div>
 
-    </div>
+      </div>
 
-    <!--Content of the Right Side-->
-    <div class="col-2 wow fadeInLeft">
-        <div class="section-heading">
-            <h3>- Dining</h3>
-            <h2 class="section-title">In Villa Romantic Candle Light Dinner</h2>
-            <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
-        </div>
-        <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
-        <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">
-            WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
-        </a>
-    </div>
-    <!--End Content Right Side-->
+      <!--Content of the Right Side-->
+      <div class="col-2 wow fadeInLeft">
+          <div class="section-heading">
+              <h3>- Dining</h3>
+              <h2 class="section-title">In Villa Romantic Candle Light Dinner</h2>
+              <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+          </div>
+          <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
+          <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">
+              WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
+          </a>
+      </div>
+      <!--End Content Right Side-->
 
-    <div class="col-2 wow fadeInRight">
-        <img src="{{asset('assets/images/dining.jpg')}}" alt="Dancer"/>
-    </div>
+      <div class="col-2 wow fadeInRight">
+          <img src="{{asset('assets/images/dining.jpg')}}" alt="Dancer"/>
+      </div>
 
-</div>
+  </div>
 
 
 </div>
@@ -146,6 +146,38 @@
 </aside>
   <!--End of Gallery-->
 
+<!--Content Section-->
+<div id="services" class="scrollto clearfix">
+
+  <div class="row no-padding-bottom clearfix">
+
+      <div class="tengah">
+          <div class="section-heading">
+              <h2 style="font-family:'MAIAN';font-weight: bold;">- SPA -</h2>
+          </div>
+
+      </div>
+
+      <div class="col-2 wow fadeInRight">
+          <img src="{{asset('assets/images/spa.jpg')}}" alt="Dancer"/>
+      </div>
+
+      <!--Content of the Right Side-->
+      <div class="col-2 wow fadeInLeft">
+          <div class="section-heading">
+              <h2 class="section-title">In Villa Spa</h2>
+              <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+          </div>
+          <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
+          <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">
+              WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
+          </a>
+      </div>
+      <!--End Content Right Side-->
+  </div>
+</div>
+<!--End of Content Section-->
 
 <!--Clients-->
 <!-- <section id="clients" class="scrollto clearfix">
@@ -213,8 +245,7 @@
             <!--Pricing Block-->
             <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
                 <div class="pricing-block-content">
-                    <h3>Honeymoon Package</h3>
-                    <p class="pricing-sub">Romantic honeymoon</p>
+                    <h3>Last Minute Deals</h3>
                     <div class="pricing">
                         <!-- <div class="price"><span>$</span>19</div> -->
                         <img src="{{asset('assets/images/gallery-images/gallery-image-9.jpg')}}" alt="Landing Page"/>
@@ -235,8 +266,7 @@
             <!--Pricing Block-->
             <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
                 <div class="pricing-block-content">
-                    <h3>Family Package</h3>
-                    <p class="pricing-sub">Romantic honeymoon</p>
+                    <h3>Hot Deals</h3>
                     <div class="pricing">
                         <!-- <div class="price"><span>$</span>19</div> -->
                         <img src="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" alt="Landing Page"/>
@@ -257,8 +287,7 @@
             <!--Pricing Block-->
             <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
                 <div class="pricing-block-content">
-                    <h3>Couple Package</h3>
-                    <p class="pricing-sub">Romantic honeymoon</p>
+                    <h3>Early Bird</h3>
                     <div class="pricing">
                         <!-- <div class="price"><span>$</span>19</div> -->
                         <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>
@@ -279,8 +308,7 @@
             <!--Pricing Block-->
             <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
                 <div class="pricing-block-content">
-                    <h3>Couple Package</h3>
-                    <p class="pricing-sub">Romantic honeymoon</p>
+                    <h3>2 Nights Honeymoon Package</h3>
                     <div class="pricing">
                         <!-- <div class="price"><span>$</span>19</div> -->
                         <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>
@@ -301,8 +329,28 @@
             <!--Pricing Block-->
             <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
                 <div class="pricing-block-content">
-                    <h3>Couple Package</h3>
-                    <p class="pricing-sub">Romantic honeymoon</p>
+                    <h3>3 Nights Honeymoon Package</h3>
+                    <div class="pricing">
+                        <!-- <div class="price"><span>$</span>19</div> -->
+                        <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>
+                    </div>
+                    <ul>
+                        <li>2 Night with one time setup bed</li>
+                        <li>2 with breakfast</li>
+                        <li>one time romantic candilac diner</li>
+                        <li>one time lunch pool</li>
+                        <li>1 year free updates</li>
+                    </ul>
+                    <a href="#" class="button">BOOK TODAY</a>
+                </div>
+            </div>
+            <!--End Pricing Block--> 
+          </div>
+          <div class="swiper-slide">
+            <!--Pricing Block-->
+            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                <div class="pricing-block-content">
+                    <h3>Family Package</h3>
                     <div class="pricing">
                         <!-- <div class="price"><span>$</span>19</div> -->
                         <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>

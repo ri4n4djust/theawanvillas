@@ -39,6 +39,46 @@
                     </script>
 
                 </div>
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <form action="{{ route('dropzone.store') }}" method="post" enctype="multipart/form-data" id="image-upload" class="dropzone">
+                    @csrf
+                        <div>
+                            <h4>Upload Multiple Image By Click On Box</h4>
+                        </div>
+                    </form>
+                    <button id="uploadFile" class="btn btn-success mt-1">Upload Images</button>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                    <script type="text/javascript">
+                        Dropzone.autoDiscover = false;
+                        var images = {{ Js::from($images) }};
+                        var myDropzone = new Dropzone(".dropzone", { 
+                            init: function() { 
+                                myDropzone = this;
+                                $.each(images, function(key,value) {
+                                    var mockFile = { name: value.name, size: value.filesize};
+                    
+                                    myDropzone.emit("addedfile", mockFile);
+                                    myDropzone.emit("thumbnail", mockFile, value.path);
+                                    myDropzone.emit("complete", mockFile);
+                        
+                                });
+                            },
+                        autoProcessQueue: true,
+                        paramName: "files",
+                        uploadMultiple: true,
+                        maxFilesize: 5,
+                        acceptedFiles: ".jpeg,.jpg,.png,.gif"
+                        });
+
+                        myDropzone.on("success", function(file, response) {
+                            console.log(response);
+                        });
+                    
+                        $('#uploadFile').click(function(){
+                        myDropzone.processQueue();
+                        });
+                    </script>
+                </div>
             </div>
         </div>
     </div>

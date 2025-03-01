@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DropzoneController;
+  
+
 
 
 // Route::get('/', function () {
@@ -19,11 +22,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/admin-gallery', [App\Http\Controllers\villaController::class , 'adminGallery'])->name('admin.gallery');
+
+    
 });
 
 require __DIR__.'/auth.php';
 
 
+Route::post('/dropzone/store', [DropzoneController::class, 'store'])->name('dropzone.store');
 
 Route::get('/', [App\Http\Controllers\villaController::class , 'home']);
 
@@ -32,6 +38,7 @@ Route::get('/two-bedroom', [App\Http\Controllers\villaController::class , 'twoBe
 
 Route::get('/dining', [App\Http\Controllers\villaController::class , 'dining']);
 Route::get('/gallery', [App\Http\Controllers\villaController::class , 'gallery']);
+Route::get('/spa', [App\Http\Controllers\villaController::class , 'spa']);
 
 Route::get('/last-minute', [App\Http\Controllers\villaController::class , 'lastMinute']);
 Route::get('/hot-deals', [App\Http\Controllers\villaController::class , 'hotDeals']);

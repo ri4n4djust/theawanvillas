@@ -38,6 +38,13 @@ class villaController extends Controller
         return view('pages.gallery');
     }
 
+    public function spa(){
+
+        // var_dump($kamar[0]->foto);
+
+        return view('pages.spa');
+    }
+
     //=========special offers
     public function lastMinute(){
 
@@ -66,6 +73,7 @@ class villaController extends Controller
 //=========admin
     public function adminGallery(){
 
-        return view('admin.admin-gallery');
+        $images = "";
+        return view('admin.admin-gallery', compact('images'));
     }   
 }
