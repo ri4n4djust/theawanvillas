@@ -1487,20 +1487,20 @@ blockquote {
 
 #villas {
     display: block;
-    text-align: center;
+    /* text-align: center; */
     position: relative;
     /* text-transform: uppercase; */
     /* font-weight: bold; */
     /* color: #fff; */
     font-family: MAIAN;
-    background-color:#f0f0f0;
+    /* background-color:#f0f0f0; */
 }
 .box-villas {
     display: inline-block;
     padding: 15px 25px;
-    margin: 0px;
+    margin: 10px;
     background-color:#fff;
-    border: 1px solid #f0f0f0;
+    /* border: 1px solid #f0f0f0; */
     border-radius: 5px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
 }
@@ -1549,7 +1549,7 @@ blockquote {
     /* font-weight: bold; */
     /* color: #fff; */
     font-family: MAIAN;
-    background-color:#f0f0f0;
+    /* background-color:#f0f0f0; */
 }
 .box-maps {
     display: inline-block;

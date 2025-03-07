@@ -14,10 +14,11 @@
 
       <div class="tengah">
           <div class="section-heading">
-              <h2 style="font-family:'MAIAN';font-weight: bold;">- Welcome To - </h2>
-              <h2 style="font-family:'MAIAN';font-weight: bold;font-size: 60px;">the Awan Villas </h2>
-              <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+              <h2 style="font-family:'MAIAN';font-weight: bold;">- Welcome to The Awan Villas Seminyak - </h2>
+              <p class="section-subtitle">
+Come and indulge in our little slice of heaven. Inspired by the essence of "Awan," meaning cloud, our villas embody serenity, tranquility, and comfort for every guest. Designed with spacious and open layouts, our villas are perfect for relaxation, sunbathing, and quality time with loved ones.
+Surrounded by lush green gardens and a beautifully landscaped outdoor pool, our villas offer a peaceful and calming retreat. Experience the ultimate getaway in Seminyak, where every moment is a chance to unwind and rejuvenate.
+</p>
           </div>
 
       </div>
@@ -31,11 +32,9 @@
       <div class="col-2">
 
           <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-              <h2 style="font-family:'MAIAN';">One Bed Room</h2>
-              <p >Villas and Spa features 19 beautifully appointed 1 Bedroom Exclusive Pool Villa, each including complimentary bottled water, 
-                balcony/terrace, air conditioning, hair dryer, complimentary Wi-Fi, separate shower and tub.
-                The Hotel’srecreational facilities, which include massage, spa, garden, indoor pool are designed for escape and relaxation.</p>
-              <a href="#" class="button">More Details <i class="fa fa-play" aria-hidden="true"></i></a>
+              <h2 style="font-family:'MAIAN';">One Bedroom Villas with Private Pool</h2>
+              <p >Experience the ultimate in luxury and relaxation in our stunning One Bedroom Villas with Private Pool.</p>
+              <a href="/one-bedroom" class="button">More Details <i class="fa fa-play" aria-hidden="true"></i></a>
               <img src="{{asset('assets/images/gallery-images/gallery-image-1.jpg')}}" alt="Landing Page"/>
           </div>
           
@@ -44,11 +43,9 @@
       <div class="col-2">
 
           <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-              <h2 style="font-family:'MAIAN';">Two Bed Room</h2>
-              <p >Villas and Spa features 19 beautifully appointed 1 Bedroom Exclusive Pool Villa, each including complimentary bottled water, 
-                balcony/terrace, air conditioning, hair dryer, complimentary Wi-Fi, separate shower and tub.
-                The Hotel’srecreational facilities, which include massage, spa, garden, indoor pool are designed for escape and relaxation.</p>
-              <a href="#" class="button">More Details <i class="fa fa-play" aria-hidden="true"></i></a>
+              <h2 style="font-family:'MAIAN';">Two Bedroom Villas with Private Pool</h2>
+              <p >Experience the ultimate in luxury and relaxation in our stunning Two Bedroom Villas with Private Pool.</p>
+              <a href="/two-bedroom" class="button">More Details <i class="fa fa-play" aria-hidden="true"></i></a>
               <img src="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" alt="Landing Page"/>
           </div>
           

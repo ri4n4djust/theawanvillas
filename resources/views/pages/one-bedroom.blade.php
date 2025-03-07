@@ -14,11 +14,9 @@
 
       <div class="col-1">
 
-          <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-                <h2 style="font-family:'MAIAN';">One Bed Room</h2>
-                <p >Villas and Spa features 19 beautifully appointed 1 Bedroom Exclusive Pool Villa, each including complimentary bottled water, 
-                balcony/terrace, air conditioning, hair dryer, complimentary Wi-Fi, separate shower and tub.
-                The Hotel’srecreational facilities, which include massage, spa, garden, indoor pool are designed for escape and relaxation.</p>
+            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+                <h2 style="font-family:'MAIAN';">One Bedroom Villas with Private Pool</h2>
+                <p class="section-subtitle" >Experience the ultimate in luxury and relaxation in our stunning One Bedroom Villas with Private Pool.</p>
                 <div class="col-3">
                     <img src="{{asset('assets/images/icon/pool.png')}}" alt="Company"/><br>
                     <span>Private Pool Size: 7m x 3m x 1,5m</span>
@@ -29,22 +27,48 @@
                 </div>
                 <div class="col-3">
                 <img src="{{asset('assets/images/icon/villa.png')}}" alt="Pool"/><br>
-                    <span>High Spped Wifi</span>
+                    <span>Villa Size 180 sqm</span>
                 </div>
                 <div class="col-3">
                 <img src="{{asset('assets/images/icon/plug.png')}}" alt="Pool"/><br>
-                    <span>High Spped Wifi</span>
+                    <span>Electrical Voltase 220V</span>
                 </div>
                 <div class="col-3">
                 <img src="{{asset('assets/images/icon/bed.png')}}" alt="Pool"/><br>
-                    <span>High Spped Wifi</span>
+                    <span>Bedroom 5m x 5m</span>
                 </div>
                 <div class="col-3">
                 <img src="{{asset('assets/images/icon/door.png')}}" alt="Pool"/><br>
-                    <span>High Spped Wifi</span>
+                    <span>Living Room 3,2m x 7,30m</span>
                 </div>
-          </div>
-          
+            </div>
+            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+                <h2 >Our luxurious villas boast:</h2>
+                    - Private Swimming Pool: Unwind in your own private oasis, surrounded by lush tropical gardens.<br>
+                    - Sundeck: Soak up the sun and take in the stunning surroundings.<br>
+                    - Shower garden which is surrounded by tropical gardens with the villa’s size 300sm2.<br>
+            </div>
+            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+                <h2 >Villa Amenities</h2>
+                <h3 >Each villa is equipped with:</h3>
+                    - Full-Size Refrigerators: Stock up on your favorite snacks and drinks.<br>
+                    - Flat Screen Televisions (TV Cables): Stay entertained, with a range of channels to choose from.<br>
+                    - Electric Kettle<br>
+                    - Kitchenette: Prepare snacks and light meals with ease.<br>
+            </div>
+            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+                <h2 >Guest Rooms</h2>
+                <h3 >Our luxurious guest rooms feature:</h3>
+                    - King Size Bed and Twin Beds: Enjoy a restful night's sleep in our comfortable beds.<br>
+                    - Mosquito Net: Sleep peacefully, protected from mosquitoes.<br>
+                    - Air-Conditioned: Stay cool and comfortable, with air conditioning throughout the villa.<br>
+                    - Wardrobes: Ample storage space for your belongings.<br>
+                    - Flat Screen Televisions (TV Cables): Stay entertained, with a range of channels to choose from.<br>
+                    - IDD Telephones: Stay connected, with international direct dialing.<br>
+                    - Internet Access (WiFi): Stay online, with fast and reliable internet access.<br>
+                    - Safety Deposit Boxes: Secure storage for your valuables.<br>
+            <div>
+
       </div>
 
 
@@ -64,39 +88,6 @@
 
     </div>
 
-    <!--Content of the Right Side-->
-    <div class="col-2 wow fadeInLeft">
-        <div class="section-heading">
-            <h2 class="section-title">In Villa Romantic Candle Light Dinner</h2>
-            <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
-            
-        </div>
-    </div>
-    <!--End Content Right Side-->
-
-    <div class="col-2 wow fadeInRight">
-        <div class="row clearfix">
-
-        <a href="{{asset('assets/images/gallery-images/gallery-image-1.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
-        data-wow-delay="0.1s">
-        <img src="{{asset('assets/images/gallery-images/gallery-image-1.jpg')}}" alt="Landing Page"/>
-        </a>
-        <a href="{{asset('assets/images/gallery-images/gallery-image-2.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
-            data-wow-delay="0.3s">
-            <img src="{{asset('assets/images/gallery-images/gallery-image-2.jpg')}}" alt="Landing Page"/>
-        </a>
-        <a href="{{asset('assets/images/gallery-images/gallery-image-3.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
-            data-wow-delay="0.5s">
-            <img src="{{asset('assets/images/gallery-images/gallery-image-3.jpg')}}" alt="Landing Page"/>
-        </a>
-        <a href="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
-            data-wow-delay="1.1s">
-            <img src="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" alt="Landing Page"/>
-        </a>
-
-        </div>
-    </div>
 
 </div>
 
