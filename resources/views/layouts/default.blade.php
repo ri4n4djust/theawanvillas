@@ -61,7 +61,7 @@
       @yield('content')
       @yield('scripts')
       <div class="popup-container" id="popupContainer">
-            <a href="https://api.whatsapp.com/send?phone=62818688114&text=&source=&data=" class="whatsApp" target="_blank"><i class="fa fa-whatsapp my-whatsApp"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=6287818175969&text=&source=&data=" class="whatsApp" target="_blank"><i class="fa fa-whatsapp my-whatsApp"></i></a>
             <div class="popup-content" id="popupContent">
                 <img src="{{asset('assets/images/wa.png')}}" /><br />
                 Scan Me

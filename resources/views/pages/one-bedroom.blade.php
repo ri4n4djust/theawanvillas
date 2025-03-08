@@ -1,4 +1,5 @@
 @extends('layouts.default')
+
 @section('meta')
     <title>The Awan Villa - One Bed Room</title>
     <meta content="best villa in bali" name="description">

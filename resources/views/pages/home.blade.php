@@ -17,7 +17,7 @@
               <h2 style="font-family:'MAIAN';font-weight: bold;">- Welcome to The Awan Villas Seminyak - </h2>
               <p class="section-subtitle">
 Come and indulge in our little slice of heaven. Inspired by the essence of "Awan," meaning cloud, our villas embody serenity, tranquility, and comfort for every guest. Designed with spacious and open layouts, our villas are perfect for relaxation, sunbathing, and quality time with loved ones.
-Surrounded by lush green gardens and a beautifully landscaped outdoor pool, our villas offer a peaceful and calming retreat. Experience the ultimate getaway in Seminyak, where every moment is a chance to unwind and rejuvenate.
+</p><p class="section-subtitle">Surrounded by lush green gardens and a beautifully landscaped outdoor pool, our villas offer a peaceful and calming retreat. Experience the ultimate getaway in Seminyak, where every moment is a chance to unwind and rejuvenate.
 </p>
           </div>
 
@@ -62,7 +62,7 @@ Surrounded by lush green gardens and a beautifully landscaped outdoor pool, our 
 
       <div class="tengah">
           <div class="section-heading">
-              <h2 style="font-family:'MAIAN';font-weight: bold;"></h2>
+              <h2 style="font-family:'MAIAN';font-weight: bold;">- Provided Services -</h2>
           </div>
 
       </div>
@@ -70,21 +70,53 @@ Surrounded by lush green gardens and a beautifully landscaped outdoor pool, our 
       <!--Content of the Right Side-->
       <div class="col-2 wow fadeInLeft">
           <div class="section-heading">
-              <h3>- Dining</h3>
-              <h2 class="section-title">In Villa Romantic Candle Light Dinner</h2>
-              <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+              <h2 style="font-family:'MAIAN';">●	In-Villa Spa</h2>
+              <p class="section-subtitle">Indulge in the ultimate relaxation experience with our In-Villa Spa services. Enjoy rejuvenating treatments in the comfort and privacy of your own villa.</p>
           </div>
           <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
-          <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">
-              WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
-          </a>
       </div>
       <!--End Content Right Side-->
 
       <div class="col-2 wow fadeInRight">
-          <img src="{{asset('assets/images/dining.jpg')}}" alt="Dancer"/>
+          <img src="{{asset('assets/images/spa.jpg')}}" alt="Dancer"/>
       </div>
+
+      <!--Content of the Right Side-->
+      <div class="col-3 wow fadeInLeft">
+      <img src="{{asset('assets/images/floating.jpg')}}" alt="Dancer"/>
+          <div class="section-heading">
+              <h2 style="font-family:'MAIAN';">●	Floating Breakfast</h2>
+              <p class="section-subtitle">Start your day in paradise with our signature Floating Breakfast experience. Indulge in a Delicious Breakfast Enjoy a mouth-watering breakfast, carefully prepared by our chefs, and served to you in the comfort of your own private pool.
+              </p>
+          </div>
+          <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
+      </div>
+      <!--End Content Right Side-->
+
+      <!-- <div class="col-6 wow fadeInRight">
+          <img src="{{asset('assets/images/dining.jpg')}}" alt="Dancer"/>
+      </div> -->
+
+      <div class="col-3 wow fadeInLeft">
+      <img src="{{asset('assets/images/romantic.jpg')}}" alt="Dancer"/>
+          <div class="section-heading">
+              <h2 style="font-family:'MAIAN';">●	Romantic Dinner</h2>
+              <p class="section-subtitle">Celebrate love and romance with a unforgettable dinner experience under the stars.</p>
+          </div>
+          <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
+      </div>
+
+      <div class="col-3 wow fadeInLeft">
+      <img src="{{asset('assets/images/honeymoon.jpg')}}" alt="Dancer"/>
+          <div class="section-heading">
+              <h2 style="font-family:'MAIAN';">●	Honeymoon Decoration</h2>
+              <p class="section-subtitle">Make your dream honeymoon even more unforgettable with our romantic decoration packages.
+Transform your villa into a love nest with our beautifully crafted decoration packages
+</p>
+          </div>
+          <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
+      </div>
+
 
   </div>
 
@@ -127,7 +159,7 @@ Surrounded by lush green gardens and a beautifully landscaped outdoor pool, our 
         data-wow-delay="0.7s">
         <img src="{{asset('assets/images/gallery-images/gallery-image-6.jpg')}}" alt="Landing Page"/>
       </a>
-      <a href="{{asset('assets/images/gallery-images/gallery-image-7.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
+      <!-- <a href="{{asset('assets/images/gallery-images/gallery-image-7.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
         data-wow-delay="0.7s">
         <img src="{{asset('assets/images/gallery-images/gallery-image-7.jpg')}}" alt="Landing Page"/>
       </a>
@@ -138,12 +170,13 @@ Surrounded by lush green gardens and a beautifully landscaped outdoor pool, our 
       <a href="{{asset('assets/images/gallery-images/gallery-image-9.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn"
         data-wow-delay="0.7s">
         <img src="{{asset('assets/images/gallery-images/gallery-image-9.jpg')}}" alt="Landing Page"/>
-      </a>
+      </a> -->
 
 </aside>
   <!--End of Gallery-->
 
 <!--Content Section-->
+<!-- 
 <div id="services" class="scrollto clearfix">
 
   <div class="row no-padding-bottom clearfix">
@@ -159,21 +192,19 @@ Surrounded by lush green gardens and a beautifully landscaped outdoor pool, our 
           <img src="{{asset('assets/images/spa.jpg')}}" alt="Dancer"/>
       </div>
 
-      <!--Content of the Right Side-->
       <div class="col-2 wow fadeInLeft">
           <div class="section-heading">
               <h2 class="section-title">In Villa Spa</h2>
               <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
           </div>
-          <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
           <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">
               WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
           </a>
       </div>
-      <!--End Content Right Side-->
   </div>
-</div>
+</div> -->
+
 <!--End of Content Section-->
 
 <!--Clients-->
@@ -227,12 +258,21 @@ Surrounded by lush green gardens and a beautifully landscaped outdoor pool, our 
   <!--End of Clients-->
 
   <!--Pricing Tables-->
+<aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
+      data-featherlight-filter="a">
+  <div class="tengah">
+      <div class="section-heading">
+          <h2 style="font-family:'MAIAN';font-weight: bold;">- We have the right package for you -</h2>
+      </div>
+  </div>
+</aside>
 <section id="pricing" class="secondary-color text-center scrollto clearfix ">
+  
   <div class="row clearfix">
 
-      <div class="section-heading">
+      <!-- <div class="section-heading">
           <h2 class="section-title">We have the right package for you</h2>
-      </div>
+      </div> -->
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>

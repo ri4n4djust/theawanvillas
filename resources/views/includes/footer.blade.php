@@ -22,16 +22,16 @@
         <div class="section-heading">
             <h2 class="section-title">  </h2>
             <p class="section-subtitle">
-                <i class="fa fa-phone" aria-hidden="true"></i>       +62 361 887877
+                <i class="fa fa-phone" aria-hidden="true"></i>       +62 361 4736549 
             </p>
             <p class="section-subtitle">
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>      +62 361 887877
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>      +62 878 1817 5969
             </p>
-            <p class="section-subtitle">
+            <!-- <p class="section-subtitle">
                 <i class="fa fa-fax" aria-hidden="true"></i>       +62 361 887877
-            </p>
+            </p> -->
             <p class="section-subtitle">
-                <i class="fa fa-envelope-open-o" aria-hidden="true"></i>   info@baliawanvillas.com
+                <i class="fa fa-envelope-open-o" aria-hidden="true"></i>   sales@baliawanvillas.com
             </p>
         </div>
         <!-- End of Testimonial-->
@@ -53,7 +53,7 @@
                 </a>
             </li>
             <li>
-                <a target="_blank" title="Instagram" href="http://www.instagram.com/username">
+                <a target="_blank" title="Instagram" href="http://www.instagram.com/theawanvillas">
                     <i class="fa fa-instagram fa-2x"></i><span>Instagram</span>
                 </a>
             </li>
@@ -68,6 +68,6 @@
 <!--End of Content Section-->
 
 <div class="row clearfix">
-  <p id="copyright" class="col-2">Made with love by <a href="https://www.shapingrain.com">ShapingRain</a></p>
+  <!-- <p id="copyright" class="col-2">Made with love by <a href="https://www.shapingrain.com">ShapingRain</a></p> -->
   
 </div>
