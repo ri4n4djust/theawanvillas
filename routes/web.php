@@ -38,7 +38,9 @@ Route::get('/two-bedroom', [App\Http\Controllers\villaController::class , 'twoBe
 
 Route::get('/dining', [App\Http\Controllers\villaController::class , 'dining']);
 Route::get('/gallery', [App\Http\Controllers\villaController::class , 'gallery']);
-Route::get('/spa', [App\Http\Controllers\villaController::class , 'spa']);
+Route::get('/provide-services', [App\Http\Controllers\villaController::class , 'services']);
+
+Route::get('/about-us', [App\Http\Controllers\villaController::class , 'aboutUs']);
 
 Route::get('/last-minute', [App\Http\Controllers\villaController::class , 'lastMinute']);
 Route::get('/hot-deals', [App\Http\Controllers\villaController::class , 'hotDeals']);

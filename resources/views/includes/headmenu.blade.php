@@ -56,7 +56,7 @@
                             </ul>
                         </li>
                         <!-- <li ><a href="/dining">DINING</a></li> -->
-                        <li ><a  href="/spa">Provided Services</a></li>
+                        <li ><a  href="/provide-services">Provided Services</a></li>
                         <li ><a  href="/gallery">GALLERY</a></li>
                         <li>
                             <a href="#">SPECIAL OFFERS</a>
@@ -69,7 +69,7 @@
                                 <li><a href="/family-package">Family Package</a></li>
                             </ul>
                         </li>
-                        <li ><a  href="/gallery">About Us</a></li>
+                        <li ><a  href="/about-us">About Us</a></li>
                     </ul>
                 </nav>
                 <!--End of Main Navigation-->

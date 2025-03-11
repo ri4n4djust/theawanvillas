@@ -38,11 +38,17 @@ class villaController extends Controller
         return view('pages.gallery');
     }
 
-    public function spa(){
+    public function services(){
 
         // var_dump($kamar[0]->foto);
 
-        return view('pages.spa');
+        return view('pages.services');
+    }
+    public function aboutUs(){
+
+        // var_dump($kamar[0]->foto);
+
+        return view('pages.about-us');
     }
 
     //=========special offers
