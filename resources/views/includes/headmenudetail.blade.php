@@ -1,7 +1,6 @@
-@php $gmbr = "" ; @endphp
-<header id="banner" class="scrollto clearfix" data-zs-src='["{{asset("assets")}}/images/banner-images/banner-image-7.jpg"]' >
+<header id="banner-wd" class="scrollto clearfix" >
 
-    <div id="header" class="nav-collapse">
+    <div id="header" class="nav-collapse" style="z-index: 2;">
         <div class="row clearfix">
             <div class="col-1">
 
@@ -55,22 +54,11 @@
                                 <li><a href="/two-bedroom">Two Bed Room</a></li>
                             </ul>
                         </li>
-                        <li >
-                            <a href="/dining">DINING</a>
-                        </li>
-                        <li ><a  href="/spa">SPA</a></li>
+                        <!-- <li ><a href="/dining">DINING</a></li> -->
+                        <li ><a  href="/provide-services">Provided Services</a></li>
                         <li ><a  href="/gallery">GALLERY</a></li>
-                        <li>
-                            <a href="#">SPECIAL OFFERS</a>
-                            <ul>
-                                <li><a href="/last-minute">Last Minute Deals</a></li>
-                                <li><a href="/hot-deals">Hot Deals</a></li>
-                                <li><a href="/early-bird">Early Bird</a></li>
-                                <li><a href="/two-night-honeymoon">2 Nights Honeymoon Package</a></li>
-                                <li><a href="/three-night-honeymoon">3 Nights Honeymoon Package</a></li>
-                                <li><a href="/family-package">Family Package</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="/special-offer">SPECIAL OFFERS</a></li>
+                        <li ><a  href="/about-us">About Us</a></li>
                     </ul>
                 </nav>
                 <!--End of Main Navigation-->
@@ -82,21 +70,5 @@
         </div>
     </div><!--End of Header-->
 
-    <!--Banner Content-->
-    <div id="banner-content" class="row clearfix">
-
-        <div class="col-38">
-
-            <div class="section-heading">
-                <h1 style="font-family:'MAIAN';">Bali Awan Villas</h1>
-                <h2>- Best Place To Stay In bali -</h2>
-            </div>
-
-            <!--Call to Action-->
-            <a href="#" class="button">BOOK TODAY</a>
-            <!--End Call to Action-->
-
-        </div>
-
-    </div><!--End of Row-->
+    
 </header>

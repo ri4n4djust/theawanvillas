@@ -33,23 +33,6 @@ Come and indulge in our little slice of heaven. Inspired by the essence of "Awan
 </section>
 
 <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-
-body {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* color: #222; */
-  /* position: relative; */
-  /* min-height: 100vh; */
-  /* background-color: #b3e6f4; */
-}
 
 .modal {
   display: flex;
@@ -60,7 +43,7 @@ body {
   /* padding: 1.3rem; */
   /* min-height: 250px; */
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   top: 4%;
   background-color: white;
   border: 1px solid #ddd;
@@ -115,7 +98,7 @@ button {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
-  z-index: 1;
+  z-index: 3;
 }
 
 .hidden {
@@ -420,200 +403,7 @@ button {
 </section> -->
   <!--End of Clients-->
 
-  <!--Pricing Tables-->
-<aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
-      data-featherlight-filter="a">
-  <div class="tengah">
-      <div class="section-heading">
-          <h2 style="font-family:'MAIAN';font-weight: bold;">- We have the right package for you -</h2>
-      </div>
-  </div>
-</aside>
-<section id="pricing" class="secondary-color text-center scrollto clearfix ">
-  
-  <div class="row clearfix">
 
-      <!-- <div class="section-heading">
-          <h2 class="section-title">We have the right package for you</h2>
-      </div> -->
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <!--Pricing Block-->
-            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                <div class="pricing-block-content">
-                    <h3>Last Minute Deals</h3>
-                    <div class="pricing">
-                        <!-- <div class="price"><span>$</span>19</div> -->
-                        <img src="{{asset('assets/images/gallery-images/gallery-image-9.jpg')}}" alt="Landing Page"/>
-                    </div>
-                    <ul>
-                        <li>2 Night with one time setup bed</li>
-                        <li>2 with breakfast</li>
-                        <li>one time romantic candilac diner</li>
-                        <li>one time lunch pool</li>
-                        <li>1 year free updates</li>
-                    </ul>
-                    <a href="#" class="button">BOOK TODAY</a>
-                </div>
-            </div>
-            <!--End Pricing Block-->
-          </div>
-          <div class="swiper-slide">
-            <!--Pricing Block-->
-            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                <div class="pricing-block-content">
-                    <h3>Hot Deals</h3>
-                    <div class="pricing">
-                        <!-- <div class="price"><span>$</span>19</div> -->
-                        <img src="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" alt="Landing Page"/>
-                    </div>
-                    <ul>
-                        <li>2 Night with one time setup bed</li>
-                        <li>2 with breakfast</li>
-                        <li>one time romantic candilac diner</li>
-                        <li>one time lunch pool</li>
-                        <li>1 year free updates</li>
-                    </ul>
-                    <a href="#" class="button">BOOK TODAY</a>
-                </div>
-            </div>
-            <!--End Pricing Block-->
-          </div>
-          <div class="swiper-slide">
-            <!--Pricing Block-->
-            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                <div class="pricing-block-content">
-                    <h3>Early Bird</h3>
-                    <div class="pricing">
-                        <!-- <div class="price"><span>$</span>19</div> -->
-                        <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>
-                    </div>
-                    <ul>
-                        <li>2 Night with one time setup bed</li>
-                        <li>2 with breakfast</li>
-                        <li>one time romantic candilac diner</li>
-                        <li>one time lunch pool</li>
-                        <li>1 year free updates</li>
-                    </ul>
-                    <a href="#" class="button">BOOK TODAY</a>
-                </div>
-            </div>
-            <!--End Pricing Block--> 
-          </div>
-          <div class="swiper-slide">
-            <!--Pricing Block-->
-            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                <div class="pricing-block-content">
-                    <h3>2 Nights Honeymoon Package</h3>
-                    <div class="pricing">
-                        <!-- <div class="price"><span>$</span>19</div> -->
-                        <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>
-                    </div>
-                    <ul>
-                        <li>2 Night with one time setup bed</li>
-                        <li>2 with breakfast</li>
-                        <li>one time romantic candilac diner</li>
-                        <li>one time lunch pool</li>
-                        <li>1 year free updates</li>
-                    </ul>
-                    <a href="#" class="button">BOOK TODAY</a>
-                </div>
-            </div>
-            <!--End Pricing Block--> 
-          </div>
-          <div class="swiper-slide">
-            <!--Pricing Block-->
-            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                <div class="pricing-block-content">
-                    <h3>3 Nights Honeymoon Package</h3>
-                    <div class="pricing">
-                        <!-- <div class="price"><span>$</span>19</div> -->
-                        <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>
-                    </div>
-                    <ul>
-                        <li>2 Night with one time setup bed</li>
-                        <li>2 with breakfast</li>
-                        <li>one time romantic candilac diner</li>
-                        <li>one time lunch pool</li>
-                        <li>1 year free updates</li>
-                    </ul>
-                    <a href="#" class="button">BOOK TODAY</a>
-                </div>
-            </div>
-            <!--End Pricing Block--> 
-          </div>
-          <div class="swiper-slide">
-            <!--Pricing Block-->
-            <div class="pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                <div class="pricing-block-content">
-                    <h3>Family Package</h3>
-                    <div class="pricing">
-                        <!-- <div class="price"><span>$</span>19</div> -->
-                        <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Landing Page"/>
-                    </div>
-                    <ul>
-                        <li>2 Night with one time setup bed</li>
-                        <li>2 with breakfast</li>
-                        <li>one time romantic candilac diner</li>
-                        <li>one time lunch pool</li>
-                        <li>1 year free updates</li>
-                    </ul>
-                    <a href="#" class="button">BOOK TODAY</a>
-                </div>
-            </div>
-            <!--End Pricing Block--> 
-          </div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows -->
-        <!-- <div class="swiper-button-next"></div> -->
-        <!-- <div class="swiper-button-prev"></div> -->
-      </div>
-      <script>
-        var swiper = new Swiper('.swiper-container', {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          centeredSlides: true,
-          autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          breakpoints: {
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
-          1920: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
-        },
-        });
-      </script>
-
-  </div>
-</section>
 
 <!--maps-->
 <section id="maps" class="scrollto clearfix">

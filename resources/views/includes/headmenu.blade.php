@@ -1,7 +1,7 @@
 @php $gmbr = "" ; @endphp
 <header id="banner" class="scrollto clearfix" data-zs-src='["{{asset("assets")}}/images/banner-images/banner-image-1.jpg", "{{asset("assets")}}/images/banner-images/banner-image-2.jpg", "{{asset("assets")}}/images/banner-images/banner-image-3.jpg", "{{asset("assets")}}/images/banner-images/banner-image-4.jpg", "{{asset("assets")}}/images/banner-images/banner-image-5.jpg", "{{asset("assets")}}/images/banner-images/banner-image-6.jpg", "{{asset("assets")}}/images/banner-images/banner-image-7.jpg"]' >
 
-    <div id="header" class="nav-collapse" style="z-index: 1;">
+    <div id="header" class="nav-collapse" style="z-index: 2;">
         <div class="row clearfix">
             <div class="col-1">
 
@@ -58,17 +58,7 @@
                         <!-- <li ><a href="/dining">DINING</a></li> -->
                         <li ><a  href="/provide-services">Provided Services</a></li>
                         <li ><a  href="/gallery">GALLERY</a></li>
-                        <li>
-                            <a href="#">SPECIAL OFFERS</a>
-                            <ul>
-                                <li><a href="/last-minute">Last Minute Deals</a></li>
-                                <li><a href="/hot-deals">Hot Deals</a></li>
-                                <li><a href="/early-bird">Early Bird</a></li>
-                                <li><a href="/two-night-honeymoon">2 Nights Honeymoon Package</a></li>
-                                <li><a href="/three-night-honeymoon">3 Nights Honeymoon Package</a></li>
-                                <li><a href="/family-package">Family Package</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="/special-offer">SPECIAL OFFERS</a></li>
                         <li ><a  href="/about-us">About Us</a></li>
                     </ul>
                 </nav>

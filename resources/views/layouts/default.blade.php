@@ -53,7 +53,13 @@
 
   <div id="wrapper">
     <!-- ======= Header ======= -->
-    @include('includes.headmenu')
+
+
+    @if (Route::is('home'))
+      @include('includes.headmenu')
+    @else
+      @include('includes.headmenudetail')
+    @endif 
 
     <main id="content">
       <!-- @include('pages.notification') -->

@@ -11,6 +11,7 @@
 
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     List Promo
+                    <a href="{{ route('admin.promo.create') }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Add Promo</a>
                 </div>
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <table class="table-auto w-full">
@@ -28,7 +29,9 @@
                         <tbody>
                             @foreach ($promos as $promo)
                             <tr>
-                                <td class="border px-4 py-2">{{ $promo->id }}</td>
+                                <td class="border px-4 py-2">
+                                    {{ $loop->iteration }}
+                                </td>
                                 <td class="border px-4 py-2">{{ $promo->title }}</td>
                                 <td class="border px-4 py-2">
                                     <a href="{{ route('admin.promo.edit', $promo->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
@@ -82,14 +85,15 @@
                                     @endif
                                 </td>
 
-                                <td class="border px-4 py-2">{{ $promo->start_date }}</td>
-                                <td class="border px-4 py-2">{{ $promo->end_date }}</td>
+                                <td class="border px-4 py-2">{{ \Carbon\Carbon::parse($promo->start_date)->format('d-m-Y') }}</td>
+                                <td class="border px-4 py-2">{{ \Carbon\Carbon::parse($promo->end_date)->format('d-m-Y') }}</td>
                                 <td class="border px-4 py-2">
                                     <img src="{{ asset('/images/'.$promo->image) }}" alt="{{ $promo->image }}" class="w-20 h-20 object-cover">
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
+                    </table>
                 </div>
                 
             </div>

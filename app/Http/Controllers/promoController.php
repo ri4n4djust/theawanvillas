@@ -14,13 +14,21 @@ class promoController extends Controller
 
     }
     public function createPromo(){
-        return view('admin.admin-promo-create');
+        return view('admin.admin-promo-edit');
     }
     public function storePromo(Request $request){
         $promo = new Promo;
         $promo->title = $request->title;
-        $promo->description = $request->description;
+        $promo->link = $request->link;
         $promo->status = $request->status;
+        $promo->start_date = $request->start_date;
+        $promo->end_date = $request->end_date;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            $promo->image = $imageName;
+            $image->move(public_path('images'), $imageName);
+        }
         $promo->save();
         return redirect()->route('admin.promo');
     }

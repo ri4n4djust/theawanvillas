@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }} admin</title>
+        <title>The Awan Villas - admin</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -51,4 +51,11 @@
             </main>
         </div>
     </body>
+    <footer class="bg-white dark:bg-gray-800 shadow mt-8">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-gray-500 dark:text-gray-400">
+            &copy; {{ date('Y') }} The Awan Villas. All rights reserved.
+        </p>
+        </div>
+    </footer>
 </html>

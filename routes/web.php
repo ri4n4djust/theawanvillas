@@ -33,7 +33,7 @@ require __DIR__.'/auth.php';
 
 Route::post('/dropzone/store', [DropzoneController::class, 'store'])->name('dropzone.store');
 
-Route::get('/', [App\Http\Controllers\villaController::class , 'home']);
+Route::get('/', [App\Http\Controllers\villaController::class , 'home'])->name('home');
 
 Route::get('/one-bedroom', [App\Http\Controllers\villaController::class , 'oneBedroom']);
 Route::get('/two-bedroom', [App\Http\Controllers\villaController::class , 'twoBedroom']);
