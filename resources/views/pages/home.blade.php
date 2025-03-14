@@ -1,4 +1,6 @@
 @extends('layouts.default')
+
+
 @section('meta')
     <title>The Awan Villa - Seminyak</title>
     <meta content="best villa in bali" name="description">
@@ -7,8 +9,12 @@
 
 @section('content')
 
+
+
+
    
 <section id="about" class="introduction scrollto">
+  
 
   <div class="row clearfix">
 
@@ -19,12 +25,169 @@
 Come and indulge in our little slice of heaven. Inspired by the essence of "Awan," meaning cloud, our villas embody serenity, tranquility, and comfort for every guest. Designed with spacious and open layouts, our villas are perfect for relaxation, sunbathing, and quality time with loved ones.
 </p><p class="section-subtitle">Surrounded by lush green gardens and a beautifully landscaped outdoor pool, our villas offer a peaceful and calming retreat. Experience the ultimate getaway in Seminyak, where every moment is a chance to unwind and rejuvenate.
 </p>
+<button class="btn btn-open hidden">Open Modal</button>
           </div>
 
       </div>
   </div>
 </section>
 
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* color: #222; */
+  /* position: relative; */
+  /* min-height: 100vh; */
+  /* background-color: #b3e6f4; */
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* gap: 0.4rem; */
+  /* width: 450px; */
+  /* padding: 1.3rem; */
+  /* min-height: 250px; */
+  position: absolute;
+  z-index: 2;
+  top: 4%;
+  background-color: white;
+  border: 1px solid #ddd;
+  /* border-radius: 15px; */
+  margin: 0 25%;
+}
+
+.modal .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.modal p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0.4rem 0 0.2rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-open {
+  position: absolute;
+  bottom: 150px;
+}
+
+.btn-close {
+  transform: translate(10px, -20px);
+  padding: 0.5rem 0.7rem;
+  background: #eee;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+    </style>
+
+<div class="modal hidden">
+  <div >
+    <button class="btn-close ">⨉</button>
+    <button class="button btn-tutup hidden">Close</button>
+  </div>
+  <div>
+    
+    @foreach($promos as $item)
+        
+        <!--Content Section-->
+        <div class="scrollto">
+
+          <div class="row no-padding-bottom">
+            
+
+              <div class="col-1">
+                <img src="{{ asset('images/' . $item->image) }}" alt="{{ $item->title }}" />
+                  <!-- <div class="section-heading"> -->
+                      <!-- <h2 style="font-family:'MAIAN';">{{ $item->title }}</h2> -->
+                  <!-- </div> -->
+                  <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
+              </div>
+
+          </div>
+          <a href="{{ $item->link }}" class="button">Learn More</a>
+        </div>
+        <!--End of Content Section-->
+        
+    @endforeach
+  </div>
+
+  
+</div>
+
+<div class="overlay hidden"></div>
+
+<script>
+  const modal = document.querySelector(".modal");
+  const overlay = document.querySelector(".overlay");
+  const btnOpen = document.querySelector(".btn-open");
+  const btnClose = document.querySelector(".btn-close");
+  const btnTutup = document.querySelector(".btn-tutup");
+
+  btnOpen.addEventListener("click", function () {
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+  });
+
+  btnClose.addEventListener("click", function () {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+  });
+  btnTutup.addEventListener("click", function () {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    // alert("Ready!");
+    if ({{ $promos->isNotEmpty() }}) {
+      modal.classList.remove("hidden");
+      overlay.classList.remove("hidden");
+    }
+  }, false);
+  </script>
 <!--Villa-->
 <section id="villas" class="scrollto clearfix">
   <div class="row clearfix">
@@ -111,8 +274,8 @@ Come and indulge in our little slice of heaven. Inspired by the essence of "Awan
           <div class="section-heading">
               <h2 style="font-family:'MAIAN';">●	Honeymoon Decoration</h2>
               <p class="section-subtitle">Make your dream honeymoon even more unforgettable with our romantic decoration packages.
-Transform your villa into a love nest with our beautifully crafted decoration packages
-</p>
+              Transform your villa into a love nest with our beautifully crafted decoration packages
+              </p>
           </div>
           <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
       </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Promo;
 
 class villaController extends Controller
 {
@@ -10,8 +11,8 @@ class villaController extends Controller
     public function home(){
 
         // var_dump($kamar[0]->foto);
-
-        return view('pages.home');
+        $promos = Promo::where('status', '1')->get();
+        return view('pages.home', compact('promos'));
     }
     public function oneBedroom(){
 

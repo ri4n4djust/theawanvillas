@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('admin.promo')" :active="request()->routeIs('admin.promo')">
+                        Promo
+                    </x-nav-link>
                     <x-nav-link :href="route('admin.gallery')" :active="request()->routeIs('admin.gallery')">
                         Gallery
                     </x-nav-link>
@@ -78,7 +81,10 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+            <x-responsive-nav-link :href="route('admin.promo')" :active="request()->routeIs('admin.promo')">
+                Promo
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('admin.gallery')" :active="request()->routeIs('admin.gallery')">
                 Gallery
             </x-responsive-nav-link>
         </div>

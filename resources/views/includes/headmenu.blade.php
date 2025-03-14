@@ -1,7 +1,7 @@
 @php $gmbr = "" ; @endphp
 <header id="banner" class="scrollto clearfix" data-zs-src='["{{asset("assets")}}/images/banner-images/banner-image-1.jpg", "{{asset("assets")}}/images/banner-images/banner-image-2.jpg", "{{asset("assets")}}/images/banner-images/banner-image-3.jpg", "{{asset("assets")}}/images/banner-images/banner-image-4.jpg", "{{asset("assets")}}/images/banner-images/banner-image-5.jpg", "{{asset("assets")}}/images/banner-images/banner-image-6.jpg", "{{asset("assets")}}/images/banner-images/banner-image-7.jpg"]' >
 
-    <div id="header" class="nav-collapse">
+    <div id="header" class="nav-collapse" style="z-index: 1;">
         <div class="row clearfix">
             <div class="col-1">
 
@@ -82,7 +82,7 @@
     </div><!--End of Header-->
 
     <!--Banner Content-->
-    <div id="banner-content" class="row clearfix">
+    <div id="banner-content" class="row clearfix" style="z-index: 1;">
 
         <div class="col-38">
 

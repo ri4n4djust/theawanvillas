@@ -8,11 +8,6 @@ use App\Http\Controllers\DropzoneController;
   
 
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -22,6 +17,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/admin-gallery', [App\Http\Controllers\villaController::class , 'adminGallery'])->name('admin.gallery');
+
+    Route::get('/admin-promo', [App\Http\Controllers\promoController::class , 'indexPromo'])->name('admin.promo');
+    Route::get('/admin-promo/create', [App\Http\Controllers\promoController::class , 'createPromo'])->name('admin.promo.create');
+    Route::post('/admin-promo/store', [App\Http\Controllers\promoController::class , 'storePromo'])->name('admin.promo.store');
+    Route::get('/admin-promo/edit/{id}', [App\Http\Controllers\promoController::class , 'editPromo'])->name('admin.promo.edit');
+    Route::patch('/admin-promo/update/{id}', [App\Http\Controllers\promoController::class , 'updatePromo'])->name('admin.promo.update');
+    Route::delete('/admin-promo/delete/{id}', [App\Http\Controllers\promoController::class , 'deletePromo'])->name('admin.promo.delete');
 
     
 });
@@ -42,25 +44,15 @@ Route::get('/provide-services', [App\Http\Controllers\villaController::class , '
 
 Route::get('/about-us', [App\Http\Controllers\villaController::class , 'aboutUs']);
 
-Route::get('/last-minute', [App\Http\Controllers\villaController::class , 'lastMinute']);
-Route::get('/hot-deals', [App\Http\Controllers\villaController::class , 'hotDeals']);
-Route::get('/early-bird', [App\Http\Controllers\villaController::class , 'earlyBird']);
-Route::get('/two-night-honeymoon', [App\Http\Controllers\villaController::class , 'twoNightHoneymoon']);
-Route::get('/three-night-honeymoon', [App\Http\Controllers\villaController::class , 'threeNightHoneymoon']);
-Route::get('/family-package', [App\Http\Controllers\villaController::class , 'familyPackage']);
-
 Route::get('/sitemap', function(){
     $sitemap = Sitemap::create()
     ->add(Url::create('/one-bedroom'))
     ->add(Url::create('/two-bedroom'))
     ->add(Url::create('/dining'))
     ->add(Url::create('/gallery'))
-    ->add(Url::create('/last-minute'))
-    ->add(Url::create('/hot-deals'))
-    ->add(Url::create('/early-bird'))
-    ->add(Url::create('/two-night-honeymoon'))
-    ->add(Url::create('/three-night-honeymoon'))
-    ->add(Url::create('/family-package'));
+    ->add(Url::create('/provide-services'))
+    ->add(Url::create('/about-us'));
+
     $sitemap->writeToFile(public_path('sitemap.xml'));
    
     // $book = Booking::all();
