@@ -6,7 +6,9 @@ use Spatie\Sitemap\Tags\Url;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DropzoneController;
   
-
+Route::get('/foo', function () {
+    Artisan::call('storage:link');
+});
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
