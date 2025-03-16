@@ -8,11 +8,6 @@
 @yield('media')
 
 <style type="text/css">
-    @font-face {
-        font-family: MAIAN;
-        src: url('{{ public_path('fonts/MAIAN.TTF') }}') format('truetype');
-    }
-
 	.swiper-container {
       /* width: 100%; */
       /* height: 400px; */
