@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Promo;
+use Illuminate\Support\Facades\DB;
 
 class villaController extends Controller
 {
@@ -12,7 +13,9 @@ class villaController extends Controller
 
         // var_dump($kamar[0]->foto);
         $promos = Promo::where('status', '1')->get();
-        return view('pages.home', compact('promos'));
+        $albums = DB::table('album')->get();
+        $galeries = DB::table('galeri')->get();
+        return view('pages.home', compact('promos', 'albums', 'galeries'));
     }
     public function oneBedroom(){
 
@@ -35,8 +38,9 @@ class villaController extends Controller
     public function gallery(){
 
         // var_dump($kamar[0]->foto);
-
-        return view('pages.gallery');
+        $albums = DB::table('album')->get();
+        $galeries = DB::table('galeri')->get();
+        return view('pages.gallery', compact('albums', 'galeries'));
     }
 
     public function services(){
@@ -77,10 +81,5 @@ class villaController extends Controller
 
         return view('pages.family-package');
     }
-//=========admin
-    public function adminGallery(){
 
-        $images = "";
-        return view('admin.admin-gallery', compact('images'));
-    }   
 }

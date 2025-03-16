@@ -1,5 +1,4 @@
-<header id="banner-wd" class="scrollto clearfix" >
-
+<header id="banner-wd" class="scrollto clearfix" style="background-image: url('{{asset('assets/images/banner-images/banner-wd-1.jpg')}}'); ">
     <div id="header" class="nav-collapse" style="z-index: 2;">
         <div class="row clearfix">
             <div class="col-1">
@@ -69,6 +68,4 @@
             </div>
         </div>
     </div><!--End of Header-->
-
-    
 </header>

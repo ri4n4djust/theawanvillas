@@ -19,36 +19,55 @@ class DropzoneController extends Controller
      *
      * @return void
      */
-    public function store(Request $request): JsonResponse
-    {
-        // Initialize an array to store image information
-        $images = [];
-  
-        // Process each uploaded image
-        foreach($request->file('files') as $image) {
-            // Generate a unique name for the image
-            $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
-              
-            // Move the image to the desired location
-            $image->move(public_path('images'), $imageName);
-  
-            // Add image information to the array
-            $images[] = [
-                'id_album' => 1,
-                'nama_foto' => $imageName,
-                'path' => asset('/images/'. $imageName),
-                'filesize' => filesize(public_path('images/'.$imageName))
-            ];
+    public function store(Request $request){
+        $request->validate([
+            'file' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
+        ]);
+
+        if ($request->hasFile('file')) {
+            
+            // Generate unique file name with timestamp
+            $fileName1 = $request->file->getClientOriginalName();
+            $idal = $request->id_album;
+            $fileName = $idal . '_' . $fileName1;
+
+            // Store the file in the 'public/uploads' directory
+            $request->file->storeAs('/images/', $fileName, 'public');
+            
+            // Save the file name to the database
+            $gallery = Gallery::updateOrCreate(
+                ['nama_foto' => $fileName],
+                [
+                    'id_album' => $request->id_album,
+                    'path' => 'storage/images/' . $fileName,
+                ]
+            );
+
+            return response()->json(['success' => true, 'file_name' => $fileName]);
         }
-  
-        // Store images in the database using create method
-        foreach ($images as $imageData) {
-            Gallery::create($imageData);
-        }
-     
-        // return response()->json(['success'=>$images]);
-        // return response()->json();
-        // return print_r($images);
-        return view('admin.admin-gallery');
+
+        return response()->json(['success' => false, 'message' => 'File upload failed']);
     }
+
+    /**
+     * Remove Image
+     *
+     * @return void
+     */
+    public function destroy(Request $request){
+        $fileName = $request->file_name;
+        $image = Gallery::where('nama_foto', $fileName)->first();
+
+        if ($image) {
+            $image->delete();
+            $image_path = $image->path;
+            if (file_exists($image_path)) {
+                unlink($image_path);
+            }
+            return response()->json(['success' => true, 'message' => 'File deleted successfully']);
+        }
+
+        return response()->json(['success' => false, 'message' => 'File not found']);
+    }
+
 }

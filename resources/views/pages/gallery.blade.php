@@ -20,9 +20,9 @@
       </div>
       <div class="gallery-categories">
         <button class="button" onclick="filterGallery('all')">All</button>
-        <button class="button" onclick="filterGallery('category1')">Category 1</button>
-        <button class="button" onclick="filterGallery('category2')">Category 2</button>
-        <button class="button" onclick="filterGallery('category3')">Category 3</button>
+        @foreach($albums as $item)
+          <button class="button" onclick="filterGallery('{{$item->id}}')">{{ $item->nama_album }}</button>
+        @endforeach
       </div>
 
       <script>
@@ -38,42 +38,12 @@
         }
       </script>
       <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-        <a href="{{asset('assets/images/gallery-images/gallery-image-1.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn category1"
-          data-wow-delay="0.2s">
-          <img src="{{asset('assets/images/gallery-images/gallery-image-1.jpg')}}" alt="Gallery Image 10"/>
-        </a>
-        <a href="{{asset('assets/images/gallery-images/gallery-image-2.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn category2"
-          data-wow-delay="0.4s">
-          <img src="{{asset('assets/images/gallery-images/gallery-image-2.jpg')}}" alt="Gallery Image 11"/>
-        </a>
-        <a href="{{asset('assets/images/gallery-images/gallery-image-3.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn category3"
-          data-wow-delay="0.6s">
-          <img src="{{asset('assets/images/gallery-images/gallery-image-3.jpg')}}" alt="Gallery Image 12"/>
-        </a>
-        <a href="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn category1"
-          data-wow-delay="0.8s">
-          <img src="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" alt="Gallery Image 13"/>
-        </a>
-        <a href="{{asset('assets/images/gallery-images/gallery-image-5.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn category2"
-          data-wow-delay="1s">
-          <img src="{{asset('assets/images/gallery-images/gallery-image-5.jpg')}}" alt="Gallery Image 14"/>
-        </a>
-        <a href="{{asset('assets/images/gallery-images/gallery-image-6.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn category3"
-          data-wow-delay="1.2s">
-          <img src="{{asset('assets/images/gallery-images/gallery-image-6.jpg')}}" alt="Gallery Image 15"/>
-        </a>
-        <a href="{{asset('assets/images/gallery-images/gallery-image-7.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn category1"
-          data-wow-delay="1.4s">
-          <img src="{{asset('assets/images/gallery-images/gallery-image-7.jpg')}}" alt="Gallery Image 16"/>
-        </a>
-        <a href="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn category2"
-          data-wow-delay="1.6s">
-          <img src="{{asset('assets/images/gallery-images/gallery-image-8.jpg')}}" alt="Gallery Image 17"/>
-        </a>
-        <a href="{{asset('assets/images/gallery-images/gallery-image-9.jpg')}}" data-featherlight="image" class="col-3 wow fadeIn category3"
-          data-wow-delay="1.8s">
-          <img src="{{asset('assets/images/gallery-images/gallery-image-9.jpg')}}" alt="Gallery Image 18"/>
-        </a>
+        @foreach($galeries as $item)
+          <a href="{{ asset('storage/images/' . $item->nama_foto) }}" data-featherlight="image" class="col-3 wow fadeIn {{$item->id_album}}"
+            data-wow-delay="0.2s">
+            <img src="{{ asset('storage/images/' . $item->nama_foto) }}" alt="{{ $item->nama_foto }}"/>
+          </a>
+        @endforeach
       </div>
       
 

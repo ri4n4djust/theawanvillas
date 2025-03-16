@@ -16,7 +16,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/admin-gallery', [App\Http\Controllers\villaController::class , 'adminGallery'])->name('admin.gallery');
+    Route::get('/admin-gallery', [App\Http\Controllers\galleryController::class , 'adminGallery'])->name('admin.gallery');
+    Route::post('/admin-gallery/store', [App\Http\Controllers\galleryController::class , 'storeGallery'])->name('admin.gallery.store');
+    Route::get('/admin-gallery-byid/{id}', [App\Http\Controllers\galleryController::class , 'getGalleryByAlbumId'])->name('admin.gallerybyid');
+
 
     Route::get('/admin-promo', [App\Http\Controllers\promoController::class , 'indexPromo'])->name('admin.promo');
     Route::get('/admin-promo/create', [App\Http\Controllers\promoController::class , 'createPromo'])->name('admin.promo.create');
@@ -25,13 +28,16 @@ Route::middleware('auth')->group(function () {
     Route::patch('/admin-promo/update/{id}', [App\Http\Controllers\promoController::class , 'updatePromo'])->name('admin.promo.update');
     Route::delete('/admin-promo/delete/{id}', [App\Http\Controllers\promoController::class , 'deletePromo'])->name('admin.promo.delete');
 
+    Route::post('/dropzone/store', [DropzoneController::class, 'store'])->name('dropzone.store');
+    Route::delete('/dropzone/delete', [DropzoneController::class, 'destroy'])->name('dropzone.delete');
+
     
 });
 
 require __DIR__.'/auth.php';
 
 
-Route::post('/dropzone/store', [DropzoneController::class, 'store'])->name('dropzone.store');
+
 
 Route::get('/', [App\Http\Controllers\villaController::class , 'home'])->name('home');
 

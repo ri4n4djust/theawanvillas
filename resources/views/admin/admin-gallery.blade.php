@@ -12,70 +12,107 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     Welcome To gallery
                 </div>
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <x-input-label for="name" :value="__('Name')" />
-                    <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                </div>
-                <div class="p-6 text-gray-900 dark:text-gray-100">
+
+                <div class="p-6">
                     <x-input-label for="album" :value="__('Album')" />
-                    <x-text-input id="album" class="block mt-1 w-full" type="text" name="album" :value="old('album')" required autofocus autocomplete="album" />
+                    <select id="album" name="album" class="block mt-1 w-full" required autofocus autocomplete="album">
+                        @foreach ($albums as $album)
+                            <option value="{{ $album->id }}">{{ $album->nama_album }}</option>
+                        @endforeach
+                            <script>
+                                document.getElementById('album').addEventListener('change', function() {
+                                    location.reload();
+                                });
+                            </script>
+                    </select>
                     <x-input-error :messages="$errors->get('album')" class="mt-2" />
                 </div>
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <x-input-label for="editor" :value="__('Editor')" />
-                    <textarea id="editor" name="editor" style="min-width:500px; max-width:100%; min-height:50px; height:400px; width:100%;"></textarea>
-                    <script>
-                        // Initialize CKEditor
-                        ClassicEditor
-                            .create(document.querySelector('textarea'))
-                            .then(editor => {
-                                console.log('Editor was initialized', editor);
-                                editor.ui.view.editable.element.style.height = '500px';
-                            })
-                            .catch(error => {
-                                console.error('Error during initialization of the editor', error);
-                            });
-                    </script>
+                    <x-input-label for="image" :value="__('Image')" />
 
-                </div>
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <form action="{{ route('dropzone.store') }}" method="post" enctype="multipart/form-data" id="image-upload" class="dropzone">
-                    @csrf
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css" />
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
+                    <form action="{{ route('dropzone.store') }}" method="post" class="dropzone" id="image-upload" style="border-radius: 5px; background: white; padding: 20px; margin-top: 30px; color: black;">
+                        @csrf
                         <div>
                             <h4>Upload Multiple Image By Click On Box</h4>
                         </div>
                     </form>
                     <button id="uploadFile" class="btn btn-success mt-1">Upload Images</button>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-                    <script type="text/javascript">
-                        Dropzone.autoDiscover = false;
-                        var images = {{ Js::from($images) }};
-                        var myDropzone = new Dropzone(".dropzone", { 
-                            init: function() { 
-                                myDropzone = this;
-                                $.each(images, function(key,value) {
-                                    var mockFile = { name: value.name, size: value.filesize};
-                    
-                                    myDropzone.emit("addedfile", mockFile);
-                                    myDropzone.emit("thumbnail", mockFile, value.path);
-                                    myDropzone.emit("complete", mockFile);
-                        
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script>
+                        let uploadedFiles = [];
+                        let id_album = document.getElementById('album').value;
+                        Dropzone.options.imageUpload = {
+                            maxFilesize: 10, // Set maximum file size to 5 MB
+                            acceptedFiles: ".jpeg,.jpg,.png,.gif",
+                            addRemoveLinks: true,
+                            init: function() {
+                                this.on("sending", function(file, xhr, formData) {
+                                    formData.append("id_album", id_album);
                                 });
-                            },
-                        autoProcessQueue: true,
-                        paramName: "files",
-                        uploadMultiple: true,
-                        maxFilesize: 5,
-                        acceptedFiles: ".jpeg,.jpg,.png,.gif"
-                        });
-
-                        myDropzone.on("success", function(file, response) {
-                            console.log(response);
-                        });
-                    
-                        $('#uploadFile').click(function(){
-                        myDropzone.processQueue();
+                                this.on("success", function(file, response) {
+                                    if (response.success) {
+                                        // console.log("File uploaded: " + response.file_name);
+                                        uploadedFiles.push(response.file_name);
+                                        // Update the file preview to use the new file name
+                                        const previewElement = file.previewElement;
+                                        const fileNameDisplay = previewElement.querySelector("[data-dz-name]");
+                                        if (fileNameDisplay) {
+                                            fileNameDisplay.textContent = response.file_name; // Update file name
+                                        }
+                                    } else {
+                                        console.error("Upload failed: " + response.message);
+                                    }
+                                });
+                                this.on("removedfile", function(file) {
+                                    const previewElement = file.previewElement;
+                                    const fileNameDisplay = previewElement.querySelector("[data-dz-name]");
+                                    let fileName = fileNameDisplay.textContent ; // file.name;
+                                    $.ajax({
+                                        type: 'delete',
+                                        url: '{{ route('dropzone.delete') }}',
+                                        data: {
+                                            _token: '{{ csrf_token() }}',
+                                            file_name: fileName,
+                                            id_album: id_album
+                                        },
+                                        success: function(data) {
+                                            if (data.success) {
+                                                console.log("File deleted: " + fileName);
+                                            } else {
+                                                console.error("Delete failed: " + data.message);
+                                            }
+                                        },
+                                        error: function(error) {
+                                            console.error("Error during deletion: ", error);
+                                        }
+                                    });
+                                });
+                            }
+                            
+                        };
+                        
+                    </script>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            let id_album = document.getElementById('album').value;
+                            fetch(`/admin-gallery-byid/${id_album}`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.success) {
+                                        let dropzone = Dropzone.forElement("#image-upload");
+                                        data.gallery.forEach(image => {
+                                            let mockFile = { name: image.nama_foto, size: image.size };
+                                            dropzone.emit("addedfile", mockFile);
+                                            dropzone.emit("thumbnail", mockFile, image.path);
+                                            dropzone.emit("complete", mockFile);
+                                        });
+                                    } else {
+                                        console.error("Failed to load images: " + data.message);
+                                    }
+                                })
+                                .catch(error => console.error("Error fetching images: ", error));
                         });
                     </script>
                 </div>
