@@ -20,14 +20,14 @@ class villaController extends Controller
     public function oneBedroom(){
 
         // var_dump($kamar[0]->foto);
-
-        return view('pages.one-bedroom');
+        $galeries = DB::table('galeri')->where('id_album', '1')->get();
+        return view('pages.one-bedroom', compact('galeries'));
     }
     public function twoBedroom(){
 
         // var_dump($kamar[0]->foto);
-
-        return view('pages.two-bedroom');
+        $galeries = DB::table('galeri')->where('id_album', '2')->get();
+        return view('pages.two-bedroom', compact('galeries'));
     }
     public function dining(){
 
@@ -56,30 +56,6 @@ class villaController extends Controller
         return view('pages.about-us');
     }
 
-    //=========special offers
-    public function lastMinute(){
-
-        return view('pages.last-minute');
-    }
-    public function hotDeals(){
-
-        return view('pages.hot-deals');
-    }
-    public function earlyBird(){
-
-        return view('pages.early-bird');
-    }
-    public function twoNightHoneymoon(){
-
-        return view('pages.two-night-honeymoon');
-    }
-    public function threeNightHoneymoon(){
-
-        return view('pages.three-night-honeymoon');
-    }
-    public function familyPackage(){
-
-        return view('pages.family-package');
-    }
+    
 
 }

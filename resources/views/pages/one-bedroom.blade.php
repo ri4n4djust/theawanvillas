@@ -8,7 +8,8 @@
 
 @section('content')
 
-   
+
+
 <!--Villa-->
 <section id="villas" class="scrollto clearfix">
   <div class="row clearfix">
@@ -69,13 +70,23 @@
                     - Internet Access (WiFi): Stay online, with fast and reliable internet access.<br>
                     - Safety Deposit Boxes: Secure storage for your valuables.<br>
             <div>
-
+            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+                <h2 >Foto Gallery</h2>
+                @foreach($galeries as $item)
+                <a href="{{ asset('storage/images/' . $item->nama_foto) }}" data-featherlight="image" class="col-5 wow fadeIn"
+                    data-wow-delay="0.2s">
+                    <img src="{{ asset('storage/images/' . $item->nama_foto) }}" alt="{{ $item->nama_foto }}"/>
+                </a>
+                @endforeach
+            <div>
       </div>
 
 
   </div>
 </section>
 <!--End of Villa-->
+
+
 
 <!--Content Section-->
 <div id="services" class="scrollto clearfix">

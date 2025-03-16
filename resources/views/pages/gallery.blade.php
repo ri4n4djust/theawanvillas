@@ -8,8 +8,7 @@
 @section('content')
 
  
-
-  <!--Gallery-->
+<!--Gallery-->
 <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
       data-featherlight-filter="a">
       <div class="tengah">

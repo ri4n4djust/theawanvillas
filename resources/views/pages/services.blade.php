@@ -70,6 +70,22 @@
           <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
       </div>
 
+      <div class="col-3 wow fadeInLeft">
+          <div class="section-heading">
+              <h2 style="font-family:'MAIAN';">●	Airport Pickup</h2>
+              <p class="section-subtitle">Pickup transfer and drop.</p>
+          </div>
+          <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
+      </div>
+
+      <div class="col-3 wow fadeInLeft">
+          <div class="section-heading">
+              <h2 style="font-family:'MAIAN';">●	Motorbike Rental</h2>
+              <p class="section-subtitle"></p>
+          </div>
+          <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
+      </div>
+
 
   </div>
 
