@@ -30,12 +30,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/admin-promo/update/{id}', [App\Http\Controllers\promoController::class , 'updatePromo'])->name('admin.promo.update');
     Route::delete('/admin-promo/delete/{id}', [App\Http\Controllers\promoController::class , 'deletePromo'])->name('admin.promo.delete');
 
-    Route::get('/admin-page', [App\Http\Controllers\PageController::class, 'index'])->name('admin.page');
-    Route::get('/admin-page/create', [App\Http\Controllers\PageController::class, 'create'])->name('admin.page.create');
-    Route::post('/admin-page/store', [App\Http\Controllers\PageController::class, 'store'])->name('admin.page.store');
-    Route::get('/admin-page/edit/{id}', [App\Http\Controllers\PageController::class, 'edit'])->name('admin.page.edit');
-    Route::patch('/admin-page/update/{id}', [App\Http\Controllers\PageController::class, 'update'])->name('admin.page.update');
-    Route::delete('/admin-page/delete/{id}', [App\Http\Controllers\PageController::class, 'destroy'])->name('admin.page.delete');
+    Route::get('/admin-page', [App\Http\Controllers\pageController::class, 'index'])->name('admin.page');
+    Route::get('/admin-page/create', [App\Http\Controllers\pageController::class, 'create'])->name('admin.page.create');
+    Route::post('/admin-page/store', [App\Http\Controllers\pageController::class, 'store'])->name('admin.page.store');
+    Route::get('/admin-page/edit/{id}', [App\Http\Controllers\pageController::class, 'edit'])->name('admin.page.edit');
+    Route::patch('/admin-page/update/{id}', [App\Http\Controllers\pageController::class, 'update'])->name('admin.page.update');
+    Route::delete('/admin-page/delete/{id}', [App\Http\Controllers\pageController::class, 'destroy'])->name('admin.page.delete');
 
 
     Route::post('/dropzone/store', [DropzoneController::class, 'store'])->name('dropzone.store');
