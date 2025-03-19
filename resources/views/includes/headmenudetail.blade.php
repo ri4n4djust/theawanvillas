@@ -1,4 +1,4 @@
-<header id="banner-wd" class="scrollto clearfix" style="background-image: url('{{asset('assets/images/banner-images/banner-wd-1.jpg')}}'); ">
+<header id="banner-wd" class="scrollto clearfix" style="background-image: url('{{ asset('storage/banner/' . $pages->image) }}'); ">
     <div id="header" class="nav-collapse" style="z-index: 2;">
         <div class="row clearfix">
             <div class="col-1">
@@ -56,7 +56,7 @@
                         <!-- <li ><a href="/dining">DINING</a></li> -->
                         <li ><a  href="/provide-services">Provided Services</a></li>
                         <li ><a  href="/gallery">GALLERY</a></li>
-                        <li><a href="/special-offer">SPECIAL OFFERS</a></li>
+                        <li><a href="/special-offers">SPECIAL OFFERS</a></li>
                         <li ><a  href="/about-us">About Us</a></li>
                     </ul>
                 </nav>

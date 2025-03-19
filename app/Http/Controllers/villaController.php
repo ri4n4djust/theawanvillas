@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Promo;
+use App\Models\Page;
 use Illuminate\Support\Facades\DB;
+
 
 class villaController extends Controller
 {
@@ -21,13 +23,16 @@ class villaController extends Controller
 
         // var_dump($kamar[0]->foto);
         $galeries = DB::table('galeri')->where('id_album', '1')->get();
-        return view('pages.one-bedroom', compact('galeries'));
+        $pages = Page::where('slug', 'one-bed-room')->first();
+
+        return view('pages.one-bedroom', compact('galeries', 'pages'));
     }
     public function twoBedroom(){
 
         // var_dump($kamar[0]->foto);
         $galeries = DB::table('galeri')->where('id_album', '2')->get();
-        return view('pages.two-bedroom', compact('galeries'));
+        $pages = Page::where('slug', 'two-bed-room')->first();
+        return view('pages.two-bedroom', compact('galeries', 'pages'));
     }
     public function dining(){
 
@@ -40,20 +45,27 @@ class villaController extends Controller
         // var_dump($kamar[0]->foto);
         $albums = DB::table('album')->get();
         $galeries = DB::table('galeri')->get();
-        return view('pages.gallery', compact('albums', 'galeries'));
+        $pages = Page::where('slug', 'gallery')->first();
+        return view('pages.gallery', compact('albums', 'galeries', 'pages'));
     }
 
     public function services(){
 
         // var_dump($kamar[0]->foto);
+        $pages = Page::where('slug', 'provide-services')->first();
+        return view('pages.services', compact('pages'));
+    }
+    public function specialOffers(){
 
-        return view('pages.services');
+        // var_dump($kamar[0]->foto);
+        $pages = Page::where('slug', 'special-offers')->first();
+        return view('pages.special-offers', compact('pages'));
     }
     public function aboutUs(){
 
         // var_dump($kamar[0]->foto);
-
-        return view('pages.about-us');
+        $pages = Page::where('slug', 'about-us')->first();
+        return view('pages.about-us', compact('pages'));
     }
 
     

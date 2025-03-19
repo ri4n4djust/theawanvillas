@@ -53,7 +53,7 @@
     @if (Route::is('home'))
       @include('includes.headmenu')
     @else
-      @include('includes.headmenudetail')
+      @include('includes.headmenudetail', ['pages' => $pages])
     @endif 
 
     <main id="content">

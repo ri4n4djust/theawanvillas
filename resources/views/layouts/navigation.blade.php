@@ -24,7 +24,7 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('galeri-admin')">
+                    <x-nav-link :href="route('admin.page')" :active="request()->routeIs('admin.page')">
                         Pages
                     </x-nav-link>
                 </div>
@@ -87,6 +87,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('admin.gallery')" :active="request()->routeIs('admin.gallery')">
                 Gallery
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('admin.page')" :active="request()->routeIs('admin.page')">
+                Pages
             </x-responsive-nav-link>
         </div>
 

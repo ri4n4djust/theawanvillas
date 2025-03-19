@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Gallery;
+use App\Models\Page;
+use Illuminate\Support\Str;
 
 class DropzoneController extends Controller
 {
@@ -48,6 +50,40 @@ class DropzoneController extends Controller
 
         return response()->json(['success' => false, 'message' => 'File upload failed']);
     }
+
+    public function storeBg(Request $request){
+        $request->validate([
+            'file' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
+        ]);
+
+        if ($request->hasFile('file')) {
+            
+            // Generate unique file name with timestamp
+            $fileName1 = $request->file->getClientOriginalName();
+            $idal = $request->idal;
+            $fileName = $idal . '_' . $fileName1;
+
+            // Store the file in the 'public/uploads' directory
+            $request->file->storeAs('/banner/', $fileName, 'public');
+            
+            // Save the file name to the database
+            $page = Page::updateOrCreate(
+                ['id' => $idal],
+                [
+                    'image' => $fileName,
+                    'title' => $request->title,
+                    'slug' => Str::slug($request->title),
+                    'content' => $request->content,
+                ]
+            );
+            
+
+            return response()->json(['success' => true, 'file_name' => $fileName]);
+        }
+
+        return response()->json(['success' => false, 'message' => 'File upload failed']);
+    }
+
 
     /**
      * Remove Image
