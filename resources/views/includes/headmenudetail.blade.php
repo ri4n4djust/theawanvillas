@@ -1,4 +1,4 @@
-<header id="banner-wd" class="scrollto clearfix" style="background-image: url('{{ asset('storage/banner/' . $pages->image) }}'); ">
+<header id="banner-wd" class="scrollto clearfix" style="background-image: url('{{ asset('storage/banner/' . $pages->image) }}');background-size: auto; ">
     <div id="header" class="nav-collapse" style="z-index: 2;">
         <div class="row clearfix">
             <div class="col-1">
