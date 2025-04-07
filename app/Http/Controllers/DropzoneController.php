@@ -106,4 +106,22 @@ class DropzoneController extends Controller
         return response()->json(['success' => false, 'message' => 'File not found']);
     }
 
+    public function destroyBg(Request $request){
+        $fileName = $request->file_name;
+        $image = Page::where('image', $fileName)->first();
+
+        if ($fileName) {
+            // $image->delete();
+            // $image_path = $image->image;
+            $image->update(['image' => '-']);
+            $image_path = "storage/banner/". $fileName;
+            if (file_exists($image_path)) {
+                unlink($image_path);
+            }
+            return response()->json(['success' => true, 'message' => 'File deleted successfully']);
+        }
+
+        return response()->json(['success' => false, 'message' => 'File not found']);
+    }
+
 }

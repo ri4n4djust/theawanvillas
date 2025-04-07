@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/dropzone/store', [DropzoneController::class, 'store'])->name('dropzone.store');
     Route::post('/dropzone/store-bg', [DropzoneController::class, 'storeBg'])->name('dropzone.storeBg');
     Route::delete('/dropzone/delete', [DropzoneController::class, 'destroy'])->name('dropzone.delete');
+    Route::delete('/dropzone/delete-bg', [DropzoneController::class, 'destroyBg'])->name('dropzone.deleteBg');
 
     
 });
