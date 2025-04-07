@@ -24,18 +24,7 @@
         @endforeach
       </div>
 
-      <script>
-        function filterGallery(category) {
-          var items = document.querySelectorAll('#gallery a');
-          items.forEach(function(item) {
-            if (category === 'all' || item.classList.contains(category)) {
-              item.style.display = 'block';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        }
-      </script>
+      
       <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
         @foreach($galeries as $item)
           <a href="{{ asset('storage/images/' . $item->nama_foto) }}" data-featherlight="image" class="col-3 wow fadeIn {{$item->id_album}}"
@@ -44,9 +33,20 @@
           </a>
         @endforeach
       </div>
-      
-
 </aside>
+
+<script>
+  function filterGallery(category) {
+    var items = document.querySelectorAll('#gallery a');
+    items.forEach(function(item) {
+      if (category === 'all' || item.classList.contains(category)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
   <!--End of Gallery-->
 
 
