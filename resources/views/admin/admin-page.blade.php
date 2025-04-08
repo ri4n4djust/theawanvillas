@@ -22,7 +22,7 @@
                             @foreach ($pages as $page)
                                 <tr>
                                     <td class="border px-4 py-2">{{ $page->title }}</td>
-                                    <td class="border px-4 py-2">{{ substr($page->content, 0, 50) }}</td>
+                                    <td class="border px-4 py-2">{!! substr($page->content, 0, 100) !!}</td>
                                     <td class="border px-4 py-2">
                                         <a href="{{ route('admin.page.edit', $page->id) }}" class="btn btn-primary">Edit</a>
                                     </td>

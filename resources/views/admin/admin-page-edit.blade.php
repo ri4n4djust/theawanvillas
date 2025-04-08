@@ -29,6 +29,7 @@
                         console.log('Editor was initialized', editor);
 
                         // window.myGlobalVar = editor;
+                        window.myGlobalVar = editor.getData();
                        
                         editor.model.document.on('change:data', () => {
                             // document.getElementById('editor').value = editor.getData();
@@ -128,23 +129,15 @@
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
                             let nm_image = document.getElementById('imgb').value;
-                            // fetch(`/admin-gallery-byid/${id_album}`)
-                            //     .then(response => response.json())
-                            //     .then(data => {
-                            //         if (data.success) {
-                                        let dropzone = Dropzone.forElement("#image-upload");
+                            let dropzone = Dropzone.forElement("#image-upload");
                                             // data.gallery.forEach(image => {
-                                                let mockFile = { name: nm_image, size: 12345 };
-                                                dropzone.emit("addedfile", mockFile);
-                                                dropzone.emit("thumbnail", mockFile, "/storage/banner/" + nm_image);
-                                                dropzone.emit("complete", mockFile);
-                                            // }
-                                        // );
-                        //             } else {
-                        //                 console.error("Failed to load images: " + data.message);
-                        //             }
-                        //         })
-                        //         .catch(error => console.error("Error fetching images: ", error));
+                            let mockFile = { name: nm_image, size: 12345 };
+                            dropzone.emit("addedfile", mockFile);
+                            dropzone.emit("thumbnail", mockFile, "/storage/banner/" + nm_image);
+                            dropzone.emit("complete", mockFile);
+
+
+                            
                         });
                     </script>
                 </div>

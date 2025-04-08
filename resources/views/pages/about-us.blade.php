@@ -15,34 +15,7 @@
 
       <div class="col-1">
 
-            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-                <h2 >About US</h2>
-                <p class="section-subtitle" >Escape to The Awan Villas, where every moment is a chance to unwind and rejuvenate. .</p>
-
-            </div>
-            
-
-            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-                <h2 >Why Choose The Awan Villas?</h2>
-                <h3 >- Prime Location & Accessibility</h3>
-                    <p class="section-subtitle" >Experience the best of Seminyak, with Batu Belig Beach just 5 minutes away, Seminyak hotspots 10 minutes away, Canggu area 15 minutes away, and a 30-minute drive from the airport.</p>
-            </div>
-            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-                <h3 >- Private Luxury & Spacious Design</h3>
-                    <p class="section-subtitle" >Each of our 300m² villas features:</p>
-                        A private pool and sundeck for ultimate relaxation<br>
-                        A Balinese-style entrance that sets the tone for a serene stay<br>
-                        A fully equipped living space, complete with modern amenities<br>
-                        A beautiful garden that creates a peaceful atmosphere<br>
-            </div>
-            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-                <h3 >- Exclusive In-Villa Spa & Modern Amenities</h3>
-                <p class="section-subtitle" >Indulge in rejuvenating spa treatments, featuring Balinese and Indonesian herbs and spices. Enjoy:</p>
-                        King-size beds for a restful night's sleep<br>
-                        Air conditioning and Wi-Fi for your convenience<br>
-                        Entertainment facilities in a serene setting<br>
-
-            <div>
+            {!! $pages->content !!}
 
       </div>
 

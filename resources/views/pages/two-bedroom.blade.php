@@ -15,60 +15,7 @@
 
       <div class="col-1">
 
-            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-                <h2 style="font-family:'MAIAN';">Two Bedroom Villas with Private Pool</h2>
-                <p class="section-subtitle" >Experience the ultimate in luxury and relaxation in our stunning One Bedroom Villas with Private Pool.</p>
-                <div class="col-3">
-                    <img src="{{asset('assets/images/icon/pool.png')}}" alt="Company"/><br>
-                    <span>Private Pool Size: 7m x 3m x 1,5m</span>
-                </div>
-                <div class="col-3">
-                <img src="{{asset('assets/images/icon/wifi.png')}}" alt="Pool"/><br>
-                    <span>High Spped Wifi</span>
-                </div>
-                <div class="col-3">
-                <img src="{{asset('assets/images/icon/villa.png')}}" alt="Pool"/><br>
-                    <span>Villa Size 180 sqm</span>
-                </div>
-                <div class="col-3">
-                <img src="{{asset('assets/images/icon/plug.png')}}" alt="Pool"/><br>
-                    <span>Electrical Voltase 220V</span>
-                </div>
-                <div class="col-3">
-                <img src="{{asset('assets/images/icon/bed.png')}}" alt="Pool"/><br>
-                    <span>Bedroom 5m x 5m</span>
-                </div>
-                <div class="col-3">
-                <img src="{{asset('assets/images/icon/door.png')}}" alt="Pool"/><br>
-                    <span>Living Room 3,2m x 7,30m</span>
-                </div>
-            </div>
-            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-                <h2 >Our luxurious villas boast:</h2>
-                    - Private Swimming Pool: Unwind in your own private oasis, surrounded by lush tropical gardens.<br>
-                    - Sundeck: Soak up the sun and take in the stunning surroundings.<br>
-                    - Shower garden which is surrounded by tropical gardens with the villa’s size 300sm2.<br>
-            </div>
-            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-                <h2 >Villa Amenities</h2>
-                <h3 >Each villa is equipped with:</h3>
-                    - Full-Size Refrigerators: Stock up on your favorite snacks and drinks.<br>
-                    - Flat Screen Televisions (TV Cables): Stay entertained, with a range of channels to choose from.<br>
-                    - Electric Kettle<br>
-                    - Kitchenette: Prepare snacks and light meals with ease.<br>
-            </div>
-            <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-                <h2 >Guest Rooms</h2>
-                <h3 >Our luxurious guest rooms feature:</h3>
-                    - King Size Bed and Twin Beds: Enjoy a restful night's sleep in our comfortable beds.<br>
-                    - Mosquito Net: Sleep peacefully, protected from mosquitoes.<br>
-                    - Air-Conditioned: Stay cool and comfortable, with air conditioning throughout the villa.<br>
-                    - Wardrobes: Ample storage space for your belongings.<br>
-                    - Flat Screen Televisions (TV Cables): Stay entertained, with a range of channels to choose from.<br>
-                    - IDD Telephones: Stay connected, with international direct dialing.<br>
-                    - Internet Access (WiFi): Stay online, with fast and reliable internet access.<br>
-                    - Safety Deposit Boxes: Secure storage for your valuables.<br>
-            <div>
+            {!! $pages->content !!}
             <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery data-featherlight-filter="a">
                 <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
                     <h2 >Foto Gallery</h2>
