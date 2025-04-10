@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin-gallery', [App\Http\Controllers\galleryController::class , 'adminGallery'])->name('admin.gallery');
     Route::post('/admin-gallery/store', [App\Http\Controllers\galleryController::class , 'storeGallery'])->name('admin.gallery.store');
     Route::get('/admin-gallery-byid/{id}', [App\Http\Controllers\galleryController::class , 'getGalleryByAlbumId'])->name('admin.gallerybyid');
+    
 
 
     Route::get('/admin-promo', [App\Http\Controllers\promoController::class , 'indexPromo'])->name('admin.promo');
@@ -39,9 +40,11 @@ Route::middleware('auth')->group(function () {
 
 
     Route::post('/dropzone/store', [DropzoneController::class, 'store'])->name('dropzone.store');
+    Route::post('/dropzone/store-sl', [DropzoneController::class, 'storeSl'])->name('dropzone.storeSl');
     Route::post('/dropzone/store-bg', [DropzoneController::class, 'storeBg'])->name('dropzone.storeBg');
     Route::delete('/dropzone/delete', [DropzoneController::class, 'destroy'])->name('dropzone.delete');
     Route::delete('/dropzone/delete-bg', [DropzoneController::class, 'destroyBg'])->name('dropzone.deleteBg');
+    Route::delete('/dropzone/delete-sl', [DropzoneController::class, 'destroySl'])->name('dropzone.deleteSl');
 
     
 });
@@ -52,7 +55,7 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/', [App\Http\Controllers\villaController::class , 'home'])->name('home');
-
+Route::get('/admin-slide', [App\Http\Controllers\galleryController::class , 'dataDasboard'])->name('admin.dataDasboard');
 Route::get('/one-bedroom', [App\Http\Controllers\villaController::class , 'oneBedroom']);
 Route::get('/two-bedroom', [App\Http\Controllers\villaController::class , 'twoBedroom']);
 

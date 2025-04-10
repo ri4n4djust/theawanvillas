@@ -1,5 +1,11 @@
-@php $gmbr = "" ; @endphp
-<header id="banner" class="scrollto clearfix" data-zs-src='["{{asset("assets")}}/images/banner-images/banner-image-1.jpg", "{{asset("assets")}}/images/banner-images/banner-image-2.jpg", "{{asset("assets")}}/images/banner-images/banner-image-3.jpg", "{{asset("assets")}}/images/banner-images/banner-image-4.jpg", "{{asset("assets")}}/images/banner-images/banner-image-5.jpg", "{{asset("assets")}}/images/banner-images/banner-image-6.jpg", "{{asset("assets")}}/images/banner-images/banner-image-7.jpg"]' >
+@php $file = "" @endphp
+@foreach ($slides as $slide)
+    
+    @php $file = $file.'"'.$slide->path.'"'.','; @endphp
+@endforeach
+@php $file = substr($file, 0, -1); @endphp
+
+<header id="banner" class="scrollto clearfix" data-zs-src='[{{ $file }}]' >
 
     <div id="header" class="nav-collapse" style="z-index: 2;">
         <div class="row clearfix">

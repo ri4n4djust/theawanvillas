@@ -17,14 +17,15 @@ class villaController extends Controller
         $promos = Promo::where('status', '1')->get();
         $albums = DB::table('album')->get();
         $galeries = DB::table('galeri')->get();
-        return view('pages.home', compact('promos', 'albums', 'galeries'));
+        $slides = DB::table('slide')->get();
+        return view('pages.home', compact('promos', 'albums', 'galeries', 'slides'));
     }
+    
     public function oneBedroom(){
 
         // var_dump($kamar[0]->foto);
         $galeries = DB::table('galeri')->where('id_album', '1')->get();
         $pages = Page::where('slug', 'one-bed-room')->first();
-
         return view('pages.one-bedroom', compact('galeries', 'pages'));
     }
     public function twoBedroom(){

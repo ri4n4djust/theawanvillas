@@ -25,5 +25,10 @@ class galleryController extends Controller
         $gallery = Gallery::where('id_album', $albumId)->get();
         return response()->json(['success' => true, 'gallery' => $gallery]);
     }
+    public function dataDasboard(){
 
+        // var_dump($kamar[0]->foto);
+        $slide = DB::table('slide')->get();
+        return response()->json(['success' => true, 'slide' => $slide]);
+    }
 }
