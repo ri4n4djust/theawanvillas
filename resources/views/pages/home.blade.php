@@ -181,7 +181,12 @@ button {
               <h2 style="font-family:'MAIAN';">One Bedroom Villas with Private Pool</h2>
               <p >Experience the ultimate in luxury and relaxation in our stunning One Bedroom Villas with Private Pool.</p>
               <a href="/one-bedroom" class="button">More Details <i class="fa fa-play" aria-hidden="true"></i></a>
-              <img src="{{asset('assets/images/gallery-images/gallery-image-1.jpg')}}" alt="Landing Page"/>
+              @php
+                $firstImage = $galeries->where('id_album', 1)->first();
+              @endphp
+              @if($firstImage)
+                <img src="{{ asset('storage/images/' . $firstImage->nama_foto) }}" alt="{{ $firstImage->nama_foto }}">
+              @endif
           </div>
           
       </div>
@@ -192,7 +197,12 @@ button {
               <h2 style="font-family:'MAIAN';">Two Bedroom Villas with Private Pool</h2>
               <p >Experience the ultimate in luxury and relaxation in our stunning Two Bedroom Villas with Private Pool.</p>
               <a href="/two-bedroom" class="button">More Details <i class="fa fa-play" aria-hidden="true"></i></a>
-              <img src="{{asset('assets/images/gallery-images/gallery-image-4.jpg')}}" alt="Landing Page"/>
+              @php
+                $firstImage = $galeries->where('id_album', 2)->first();
+              @endphp
+              @if($firstImage)
+                <img src="{{ asset('storage/images/' . $firstImage->nama_foto) }}" alt="{{ $firstImage->nama_foto }}">
+              @endif
           </div>
           
       </div>

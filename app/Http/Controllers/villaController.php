@@ -53,8 +53,9 @@ class villaController extends Controller
     public function services(){
 
         // var_dump($kamar[0]->foto);
+        $galeries = DB::table('galeri')->get();
         $pages = Page::where('slug', 'provide-services')->first();
-        return view('pages.services', compact('pages'));
+        return view('pages.services', compact('pages', 'galeries'));
     }
     public function specialOffers(){
 
