@@ -234,12 +234,23 @@ button {
       <!--End Content Right Side-->
 
       <div class="col-2 wow fadeInRight">
-          <img src="{{asset('assets/images/spa.jpg')}}" alt="Dancer"/>
+              @php
+                $firstImage = $galeries->where('id_album', 4)->first();
+              @endphp
+              @if($firstImage)
+                <img src="{{ asset('storage/images/' . $firstImage->nama_foto) }}" alt="{{ $firstImage->nama_foto }}">
+              @endif
       </div>
 
       <!--Content of the Right Side-->
       <div class="col-3 wow fadeInLeft">
-      <img src="{{asset('assets/images/floating.jpg')}}" alt="Dancer"/>
+              @php
+                $firstImage = $galeries->where('id_album', 5)->first();
+              @endphp
+              @if($firstImage)
+                <img src="{{ asset('storage/images/' . $firstImage->nama_foto) }}" alt="{{ $firstImage->nama_foto }}">
+              @endif
+      
           <div class="section-heading">
               <h2 style="font-family:'MAIAN';">●	Floating Breakfast</h2>
               <p class="section-subtitle">Start your day in paradise with our signature Floating Breakfast experience. Indulge in a Delicious Breakfast Enjoy a mouth-watering breakfast, carefully prepared by our chefs, and served to you in the comfort of your own private pool.
@@ -254,7 +265,12 @@ button {
       </div> -->
 
       <div class="col-3 wow fadeInLeft">
-      <img src="{{asset('assets/images/romantic.jpg')}}" alt="Dancer"/>
+          @php
+            $firstImage = $galeries->where('id_album', 6)->first();
+          @endphp
+          @if($firstImage)
+            <img src="{{ asset('storage/images/' . $firstImage->nama_foto) }}" alt="{{ $firstImage->nama_foto }}">
+          @endif
           <div class="section-heading">
               <h2 style="font-family:'MAIAN';">●	Romantic Dinner</h2>
               <p class="section-subtitle">Celebrate love and romance with a unforgettable dinner experience under the stars.</p>
@@ -263,7 +279,12 @@ button {
       </div>
 
       <div class="col-3 wow fadeInLeft">
-      <img src="{{asset('assets/images/honeymoon.jpg')}}" alt="Dancer"/>
+        @php
+          $firstImage = $galeries->where('id_album', 7)->first();
+        @endphp
+        @if($firstImage)
+          <img src="{{ asset('storage/images/' . $firstImage->nama_foto) }}" alt="{{ $firstImage->nama_foto }}">
+        @endif
           <div class="section-heading">
               <h2 style="font-family:'MAIAN';">●	Honeymoon Decoration</h2>
               <p class="section-subtitle">Make your dream honeymoon even more unforgettable with our romantic decoration packages.
@@ -309,11 +330,19 @@ button {
         }
       </script>
       <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-        @foreach($galeries as $item)
-          <a href="{{ asset('storage/images/' . $item->nama_foto) }}" data-featherlight="image" class="col-3 wow fadeIn {{$item->id_album}}"
-            data-wow-delay="0.2s">
-            <img src="{{ asset('storage/images/' . $item->nama_foto) }}" alt="{{ $item->nama_foto }}"/>
-          </a>
+        @php
+          $filteredGaleries = $galeries->groupBy('id_album')->map(function ($group) {
+              return $group->take(3);
+          });
+        @endphp
+
+        @foreach($filteredGaleries as $group)
+          @foreach($group as $item)
+            <a href="{{ asset('storage/images/' . $item->nama_foto) }}" data-featherlight="image" class="col-4 wow fadeIn {{$item->id_album}}"
+              data-wow-delay="0.2s">
+              <img src="{{ asset('storage/images/' . $item->nama_foto) }}" alt="{{ $item->nama_foto }}"/>
+            </a>
+          @endforeach
         @endforeach
       </div>
 

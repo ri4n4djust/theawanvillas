@@ -133,37 +133,78 @@
 
       </div>
 
-    <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
         }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
         }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-      }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
       </script>
       <!--Content of the Right Side-->
       <div class="col-3 wow fadeInLeft">
-      <img src="{{asset('assets/images/floating.jpg')}}" alt="Dancer"/>
+        <div class="slideshow-container">
+          @php
+              $getImage = $galeries->where('id_album', 5);
+          @endphp
+          @foreach($getImage as $service)
+          <div class="mySlidesf fade">
+              <img src="{{ asset('storage/images/' . $service->nama_foto) }}" >
+          </div>
+          @endforeach
+
+          <a class="prev" onclick="plusSlidesf(-1)">❮</a>
+          <a class="next" onclick="plusSlidesf(1)">❯</a>
+
+        </div>
+        <script>
+          let slideIndexf = 1;
+          showSlidesf(slideIndexf);
+
+          function plusSlidesf(n) {
+            showSlidesf(slideIndexf += n);
+          }
+
+          function currentSlidef(n) {
+            showSlidesf(slideIndexf = n);
+          }
+
+          function showSlidesf(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlidesf");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndexf = 1}    
+            if (n < 1) {slideIndexf = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndexf-1].style.display = "block";  
+            dots[slideIndexf-1].className += " active";
+          }
+        </script>
           <div class="section-heading">
               <h2 style="font-family:'MAIAN';">●	Floating Breakfast</h2>
               <p class="section-subtitle">Start your day in paradise with our signature Floating Breakfast experience. Indulge in a Delicious Breakfast Enjoy a mouth-watering breakfast, carefully prepared by our chefs, and served to you in the comfort of your own private pool.
@@ -178,7 +219,48 @@
       </div> -->
 
       <div class="col-3 wow fadeInLeft">
-      <img src="{{asset('assets/images/romantic.jpg')}}" alt="Dancer"/>
+        <div class="slideshow-container">
+            @php
+                $getImage = $galeries->where('id_album', 6);
+            @endphp
+            @foreach($getImage as $service)
+            <div class="mySlidesr fade">
+                <img src="{{ asset('storage/images/' . $service->nama_foto) }}" >
+            </div>
+            @endforeach
+
+            <a class="prev" onclick="plusSlidesr(-1)">❮</a>
+            <a class="next" onclick="plusSlidesr(1)">❯</a>
+
+          </div>
+          <script>
+            let slideIndexr = 1;
+            showSlidesr(slideIndexr);
+
+            function plusSlidesr(n) {
+              showSlidesr(slideIndexr += n);
+            }
+
+            function currentSlider(n) {
+              showSlidesr(slideIndexr = n);
+            }
+
+            function showSlidesr(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlidesr");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndexr = 1}    
+              if (n < 1) {slideIndexr = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndexr-1].style.display = "block";  
+              dots[slideIndexr-1].className += " active";
+            }
+          </script>
           <div class="section-heading">
               <h2 style="font-family:'MAIAN';">●	Romantic Dinner</h2>
               <p class="section-subtitle">Celebrate love and romance with a unforgettable dinner experience under the stars.</p>
@@ -187,7 +269,48 @@
       </div>
 
       <div class="col-3 wow fadeInLeft">
-      <img src="{{asset('assets/images/honeymoon.jpg')}}" alt="Dancer"/>
+        <div class="slideshow-container">
+            @php
+                $getImage = $galeries->where('id_album', 7);
+            @endphp
+            @foreach($getImage as $service)
+            <div class="mySlidesh fade">
+                <img src="{{ asset('storage/images/' . $service->nama_foto) }}" >
+            </div>
+            @endforeach
+
+            <a class="prev" onclick="plusSlidesh(-1)">❮</a>
+            <a class="next" onclick="plusSlidesh(1)">❯</a>
+
+          </div>
+          <script>
+            let slideIndexh = 1;
+            showSlidesh(slideIndexh);
+
+            function plusSlidesh(n) {
+              showSlidesh(slideIndexh += n);
+            }
+
+            function currentSlideh(n) {
+              showSlidesh(slideIndexh = n);
+            }
+
+            function showSlidesh(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlidesh");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndexh = 1}    
+              if (n < 1) {slideIndexh = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndexh-1].style.display = "block";  
+              dots[slideIndexh-1].className += " active";
+            }
+          </script>
           <div class="section-heading">
               <h2 style="font-family:'MAIAN';">●	Honeymoon Decoration</h2>
               <p class="section-subtitle">Make your dream honeymoon even more unforgettable with our romantic decoration packages. Transform your villa into a love nest with our beautifully crafted decoration packages
