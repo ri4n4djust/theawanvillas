@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <x-input-label for="Slide" :value="__('Slide')" />
+            <x-input-label for="Slide" :value="__('Slide Size 1400x650')" />
 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css" />
             <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
