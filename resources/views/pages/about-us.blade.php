@@ -1,8 +1,8 @@
 @extends('layouts.default')
 
 @section('meta')
-    <title>The Awan Villa - One Bed Room</title>
-    <meta content="best villa in bali" name="description">
+    <title>The Awan Villa - About Us</title>
+    <meta content="{!! $pages->content !!}" name="description">
     <meta content="bali room booking, car rental bali, bali management property" name="keywords">
 @endsection
 
