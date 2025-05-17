@@ -46,42 +46,39 @@
             </div>
             <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
                 <h2 >Our luxurious villas boast:</h2>
-                    - Private Swimming Pool: Unwind in your own private oasis, surrounded by lush tropical gardens.<br>
-                    - Sundeck: Soak up the sun and take in the stunning surroundings.<br>
-                    - Shower garden which is surrounded by tropical gardens with the villa’s size 300sm2.<br>
+                    <p style="line-height: 15px;">- Private Swimming Pool: Unwind in your own private oasis, surrounded by lush tropical gardens.</p>
+                    <p style="line-height: 15px;">- Sundeck: Soak up the sun and take in the stunning surroundings.</p>
+                    <p style="line-height: 15px;">- Shower garden which is surrounded by tropical gardens with the villa’s size 300sm2.</p>
             </div>
             <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
                 <h2 >Villa Amenities</h2>
                 <h3 >Each villa is equipped with:</h3>
-                    - Full-Size Refrigerators: Stock up on your favorite snacks and drinks.<br>
-                    - Flat Screen Televisions (TV Cables): Stay entertained, with a range of channels to choose from.<br>
-                    - Electric Kettle<br>
-                    - Kitchenette: Prepare snacks and light meals with ease.<br>
+                    <p style="line-height: 15px;">- Full-Size Refrigerators: Stock up on your favorite snacks and drinks.</p>
+                    <p style="line-height: 15px;">- Flat Screen Televisions (TV Cables): Stay entertained, with a range of channels to choose from.</p>
+                    <p style="line-height: 15px;">- Electric Kettle<br>
+                    <p style="line-height: 15px;">- Kitchenette: Prepare snacks and light meals with ease.</p>
             </div>
             <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
                 <h2 >Guest Rooms</h2>
                 <h3 >Our luxurious guest rooms feature:</h3>
-                    - King Size Bed and Twin Beds: Enjoy a restful night's sleep in our comfortable beds.<br>
-                    - Mosquito Net: Sleep peacefully, protected from mosquitoes.<br>
-                    - Air-Conditioned: Stay cool and comfortable, with air conditioning throughout the villa.<br>
-                    - Wardrobes: Ample storage space for your belongings.<br>
-                    - Flat Screen Televisions (TV Cables): Stay entertained, with a range of channels to choose from.<br>
-                    - IDD Telephones: Stay connected, with international direct dialing.<br>
-                    - Internet Access (WiFi): Stay online, with fast and reliable internet access.<br>
-                    - Safety Deposit Boxes: Secure storage for your valuables.<br>
+                    <p style="line-height: 15px;">- King Size Bed and Twin Beds: Enjoy a restful night's sleep in our comfortable beds.</p>
+                    <p style="line-height: 15px;">- Mosquito Net: Sleep peacefully, protected from mosquitoes.</p>
+                    <p style="line-height: 15px;">- Air-Conditioned: Stay cool and comfortable, with air conditioning throughout the villa.</p>
+                    <p style="line-height: 15px;">- Wardrobes: Ample storage space for your belongings.</p>
+                    <p style="line-height: 15px;">- Flat Screen Televisions (TV Cables): Stay entertained, with a range of channels to choose from.</p>
+                    <p style="line-height: 15px;">- IDD Telephones: Stay connected, with international direct dialing.</p>
+                    <p style="line-height: 15px;">- Internet Access (WiFi): Stay online, with fast and reliable internet access.</p>
+                    <p style="line-height: 15px;">- Safety Deposit Boxes: Secure storage for your valuables.</p>
             <div>
-
-            <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery data-featherlight-filter="a">
-                <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-                    <h2 >Foto Gallery</h2>
-                    @foreach($galeries as $item)
-                    <a href="{{ asset('storage/images/' . $item->nama_foto) }}" data-featherlight="image" class="col-5 wow fadeIn"
-                        data-wow-delay="0.2s">
-                        <img src="{{ asset('storage/images/' . $item->nama_foto) }}" alt="{{ $item->nama_foto }}"/>
-                    </a>
-                    @endforeach
-                <div>
-            </aside>
+            <div id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery data-featherlight-filter="a">
+                <h2 >Foto Gallery</h2>
+                @foreach($galeries as $item)
+                <a href="{{ asset('storage/images/' . $item->nama_foto) }}" data-featherlight="image" class="col-4 wow fadeIn"
+                    data-wow-delay="0.2s">
+                    <img src="{{ asset('storage/images/' . $item->nama_foto) }}" alt="{{ $item->nama_foto }}"/>
+                </a>
+                @endforeach
+            </div>
       </div>
 
 
