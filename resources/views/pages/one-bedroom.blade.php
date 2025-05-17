@@ -14,7 +14,7 @@
 <section id="villas" class="scrollto clearfix">
   <div class="row clearfix">
 
-      <div class="col-1">
+        <div class="col-1">
 
             <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
                 <h2 style="font-family:'MAIAN';">One Bedroom Villas with Private Pool</h2>
@@ -70,16 +70,17 @@
                     <p style="line-height: 15px;">- Internet Access (WiFi): Stay online, with fast and reliable internet access.</p>
                     <p style="line-height: 15px;">- Safety Deposit Boxes: Secure storage for your valuables.</p>
             <div>
-            <div id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery data-featherlight-filter="a">
-                <h2 >Foto Gallery</h2>
-                @foreach($galeries as $item)
-                <a href="{{ asset('storage/images/' . $item->nama_foto) }}" data-featherlight="image" class="col-4 wow fadeIn"
-                    data-wow-delay="0.2s">
-                    <img src="{{ asset('storage/images/' . $item->nama_foto) }}" alt="{{ $item->nama_foto }}"/>
-                </a>
-                @endforeach
-            </div>
-      </div>
+            
+        </div>
+        <div id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery data-featherlight-filter="a">
+            <h2 >Foto Gallery</h2>
+            @foreach($galeries as $item)
+            <a href="{{ asset('storage/images/' . $item->nama_foto) }}" data-featherlight="image" class="col-4 wow fadeIn"
+                data-wow-delay="0.2s">
+                <img src="{{ asset('storage/images/' . $item->nama_foto) }}" alt="{{ $item->nama_foto }}"/>
+            </a>
+            @endforeach
+        </div>
 
 
   </div>
