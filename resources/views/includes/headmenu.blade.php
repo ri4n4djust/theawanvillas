@@ -84,7 +84,7 @@
 
             <div class="section-heading">
                 <h1 style="font-family:'MAIAN';">Bali Awan Villas</h1>
-                <h2>- Best Place to Stay in Bali -</h2>
+                <h2 style="font-family:'MAIAN';font-size: 30px">- Best Place to Stay in Bali -</h2>
             </div>
 
             <!--Call to Action-->

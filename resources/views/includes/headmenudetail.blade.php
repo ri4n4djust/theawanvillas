@@ -21,7 +21,7 @@
                 <aside>
 
                     <!--Social Icons in Header-->
-                    <ul class="social-icons">
+                    <!-- <ul class="social-icons">
                         <li>
                             <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
                                 <i class="fa fa-facebook fa-3x"></i><span>Facebook</span>
@@ -37,7 +37,7 @@
                                 <i class="fa fa-instagram fa-3x"></i><span>Instagram</span>
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
                     <!--End of Social Icons in Header-->
 
                 </aside>
