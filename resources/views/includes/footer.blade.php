@@ -33,6 +33,14 @@
             <p class="section-subtitle">
                 <i class="fa fa-envelope-open-o" aria-hidden="true"></i>   sales@baliawanvillas.com
             </p>
+            <p class="section-subtitle">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <a href="https://www.instagram.com/theawanvillas" target="_blank">@theawanvillas</a>
+            </p>
+            <p class="section-subtitle">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <a href="https://www.facebook.com/theawanvillas" target="_blank">The Awan Villas</a>
+            </p>
         </div>
         <!-- End of Testimonial-->
     </div>
@@ -41,7 +49,7 @@
     <div class="col-3">
         <img src="{{asset('assets/images/logo-2.png')}}" alt="Landing Page"/>
         <!--Social Icons in Footer-->
-        <ul class="col-2 social-icons">
+        <!-- <ul class="col-2 social-icons">
             <li>
                 <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
                     <i class="fa fa-facebook fa-2x"></i><span>Facebook</span>
@@ -54,10 +62,10 @@
             </li>
             <li>
                 <a target="_blank" title="Instagram" href="http://www.instagram.com/theawanvillas">
-                    <i class="fa fa-instagram fa-2x"></i><span>Instagram</span>
+                    <i class="fa fa-instagram fa-2x"></i><span>Instagram @theawanvillas</span>
                 </a>
             </li>
-        </ul>
+        </ul> -->
         <!--End of Social Icons in Footer-->
     </div>
 

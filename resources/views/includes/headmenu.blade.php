@@ -29,7 +29,7 @@
                 <aside>
 
                     <!--Social Icons in Header-->
-                    <ul class="social-icons">
+                    <!-- <ul class="social-icons">
                         <li>
                             <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
                                 <i class="fa fa-facebook fa-3x"></i><span>Facebook</span>
@@ -45,7 +45,7 @@
                                 <i class="fa fa-instagram fa-3x"></i><span>Instagram</span>
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
                     <!--End of Social Icons in Header-->
 
                 </aside>
@@ -84,7 +84,7 @@
 
             <div class="section-heading">
                 <h1 style="font-family:'MAIAN';">Bali Awan Villas</h1>
-                <h2>- Best Place To Stay In bali -</h2>
+                <h2>- Best Place to Stay in Bali -</h2>
             </div>
 
             <!--Call to Action-->

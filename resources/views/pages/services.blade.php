@@ -207,7 +207,7 @@
         </script>
           <div class="section-heading">
               <h2 style="font-family:'MAIAN';">●	Floating Breakfast</h2>
-              <p class="section-subtitle">Start your day in paradise with our signature Floating Breakfast experience. Indulge in a Delicious Breakfast Enjoy a mouth-watering breakfast, carefully prepared by our chefs, and served to you in the comfort of your own private pool.
+              <p class="section-subtitle">Start your day in paradise with our signature Floating Breakfast experience. Indulge in a delicious breakfast carefully prepared by our chefs and served to you in the comfort of your own private pool.
               </p>
           </div>
           <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
@@ -313,7 +313,7 @@
           </script>
           <div class="section-heading">
               <h2 style="font-family:'MAIAN';">●	Honeymoon Decoration</h2>
-              <p class="section-subtitle">Make your dream honeymoon even more unforgettable with our romantic decoration packages. Transform your villa into a love nest with our beautifully crafted decoration packages
+              <p class="section-subtitle">Make your dream honeymoon even more unforgettable with our romantic decoration packages. Transform your villa into a love nest with our beautifully crafted decoration packages.
               </p>
           </div>
           <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
