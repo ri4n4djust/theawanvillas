@@ -8,7 +8,7 @@
     <div class="col-3">
         <!--User Testimonial-->
         <div class="section-heading">
-            <h2 class="section-title">Contact Us Now</h2>
+            <h2 class="section-title">Contact us Now</h2>
             <p class="section-subtitle">Jl. Batu Belig No.168, Seminyak, Kec. Kuta Utara, Kabupaten Badung, Bali 80361</p>
         </div>
         <!-- End of Testimonial-->
