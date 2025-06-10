@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Promo;
 use App\Models\Page;
 use Illuminate\Support\Facades\DB;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 
 class villaController extends Controller
@@ -69,7 +70,21 @@ class villaController extends Controller
         $pages = Page::where('slug', 'about-us')->first();
         return view('pages.about-us', compact('pages'));
     }
+    public function generate()
+    {
+        $domain = request()->getSchemeAndHttpHost();
+        // var_dump($domain);
+        // Generate QR code with text "Hello, Laravel 11!"
+        $qrCode = QrCode::size(300)->generate($domain.'/spa');
 
+        return response($qrCode)->header('Content-Type', 'image/svg+xml');
+    }
     
+    public function otherServices(){
+        
+
+        $pages = Page::where('slug', 'about-us')->first();
+        return view('pages.other-services', compact('pages'));
+    }
 
 }

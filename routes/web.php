@@ -65,6 +65,9 @@ Route::get('/provide-services', [App\Http\Controllers\villaController::class , '
 Route::get('/special-offers', [App\Http\Controllers\villaController::class , 'specialOffers']);
 Route::get('/about-us', [App\Http\Controllers\villaController::class , 'aboutUs']);
 
+Route::get('/other-services', [App\Http\Controllers\villaController::class , 'otherServices'])->name('other.services');
+Route::get('/generate', [App\Http\Controllers\villaController::class , 'generate'])->name('generate');
+
 Route::get('/sitemap', function(){
     $sitemap = Sitemap::create()
     ->add(Url::create('/one-bedroom'))
