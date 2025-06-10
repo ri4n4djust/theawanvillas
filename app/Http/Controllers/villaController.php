@@ -84,7 +84,7 @@ class villaController extends Controller
         $qrCode = QrCode::format('svg')
             ->style('round')
             ->size(600)
-            ->merge($logoPath, 0.3, true)
+            ->merge($logoPath, 1, true)
             ->generate($domain.'/other-services');
         return response($qrCode);
     }
