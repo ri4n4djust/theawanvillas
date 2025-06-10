@@ -75,7 +75,7 @@ class villaController extends Controller
         $domain = request()->getSchemeAndHttpHost();
         // var_dump($domain);
         // Generate QR code with text "Hello, Laravel 11!"
-        $qrCode = QrCode::size(300)->generate($domain.'/spa');
+        $qrCode = QrCode::size(300)->generate($domain.'/other-services');
 
         return response($qrCode)->header('Content-Type', 'image/svg+xml');
     }
