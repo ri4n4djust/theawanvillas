@@ -60,7 +60,7 @@
         background-color:#fff;
         /* border: 1px solid #f0f0f0; */
         border-radius: 4px;
-        box-shadow: 0px 1px 2px rgba(40, 49, 176, 0.98);
+        box-shadow: 0px 1px 0px rgba(40, 49, 176, 0.98);
     }
     
 </style>
