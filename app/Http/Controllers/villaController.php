@@ -75,9 +75,18 @@ class villaController extends Controller
         $domain = request()->getSchemeAndHttpHost();
         // var_dump($domain);
         // Generate QR code with text "Hello, Laravel 11!"
-        $qrCode = QrCode::size(300)->generate($domain.'/other-services');
-
-        return response($qrCode)->header('Content-Type', 'image/svg+xml');
+        // $qrCode = QrCode::size(300)->generate($domain.'/other-services');
+        // Insert logo inside QR code
+        if (!file_exists(public_path('assets/images/logo.png'))) {
+            abort(404, 'Logo file not found.');
+        }
+        $logoPath = public_path('assets/images/logo.png'); // Adjust path as needed
+        $qrCode = QrCode::format('svg')
+            ->style('round')
+            ->size(600)
+            ->merge($logoPath, 0.3, true)
+            ->generate($domain.'/other-services');
+        return response($qrCode);
     }
     
     public function otherServices(){
