@@ -35,7 +35,8 @@ class DropzoneController extends Controller
             $fileName = $idal . '_' . $fileName1;
 
             // Store the file in the 'public/uploads' directory
-            $request->file->storeAs('/images/', $fileName, 'public');
+            $request->file->move(public_path('storage/images'), $fileName);
+            // $request->file->storeAs('/images/', $fileName, 'public');
             
             // Save the file name to the database
             $gallery = Gallery::updateOrCreate(
@@ -65,7 +66,8 @@ class DropzoneController extends Controller
             $fileName = $idal . '_' . $fileName1;
 
             // Store the file in the 'public/uploads' directory
-            $request->file->storeAs('/banner/', $fileName, 'public');
+            $request->file->move(public_path('storage/banner'), $fileName);
+            // $request->file->storeAs('/banner/', $fileName, 'public');
             
             // Save the file name to the database
             $page = Page::updateOrCreate(
@@ -98,7 +100,8 @@ class DropzoneController extends Controller
             // $fileName = $idal . '_' . $fileName1;
 
             // Store the file in the 'public/uploads' directory
-            $request->file->storeAs('/slide/', $fileName, 'public');
+            $request->file->move(public_path('storage/slide'), $fileName);
+            // $request->file->storeAs('/slide/', $fileName, 'public');
             
             // Save the file name to the database
             $page = DB::table('slide')->insert(
@@ -130,7 +133,8 @@ class DropzoneController extends Controller
 
         if ($image) {
             $image->delete();
-            $image_path = $image->path;
+            // $image_path = $image->path;
+            $image_path = public_path("storage/images/". $fileName);
             if (file_exists($image_path)) {
                 unlink($image_path);
             }
@@ -148,7 +152,8 @@ class DropzoneController extends Controller
             // $image->delete();
             // $image_path = $image->image;
             $image->update(['image' => '-']);
-            $image_path = "/storage/banner/". $fileName;
+            // $image_path = "/storage/banner/". $fileName;
+            $image_path = public_path("storage/banner/". $fileName);
             if (file_exists($image_path)) {
                 unlink($image_path);
             }
@@ -167,7 +172,8 @@ class DropzoneController extends Controller
             // $image->delete();
             // $image_path = $image->image;
             // $image->update(['image' => '-']);
-            $image_path = "/storage/slide/". $fileName;
+            // $image_path = "storage/slide/". $fileName;
+            $image_path = public_path("storage/slide/". $fileName);
             if (file_exists($image_path)) {
                 unlink($image_path);
             }
