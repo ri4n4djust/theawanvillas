@@ -81,7 +81,7 @@ class villaController extends Controller
             abort(404, 'Logo file not found.');
         }
         $logoPath = public_path('assets/images/logo.png'); // Adjust path as needed
-        $qrCode = QrCode::format('svg')
+        $qrCode = QrCode::format('png')
             ->style('round')
             ->size(600)
             ->merge($logoPath, 1, true)

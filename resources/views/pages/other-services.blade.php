@@ -87,7 +87,6 @@
                 <!--End of Logo-->
 
                 <!--Main Navigation-->
-                <!--Main Navigation-->
                 <nav id="nav-main">
                     <ul>
                         <li ><a  href="/">Home</a></li>
@@ -106,7 +105,6 @@
                     </ul>
                 </nav>
                 <!--End of Main Navigation-->
-                <!--End of Main Navigation-->
 
                 <div id="nav-trigger"><span></span></div>
                 <nav id="nav-mobile"></nav>
@@ -116,6 +114,29 @@
     </div><!--End of Header-->
 
 </header>
+<script>
+    // Save original backgrounds for each category
+    const bannerOther = document.getElementById('banner-other');
+    const backgrounds = {
+        spa: "{{ asset('images/spa.png') }}",
+        menu: "{{ asset('images/other1.png') }}",
+        tur: "{{ asset('images/other1.png') }}"
+    };
+
+    // Patch filterOther to also change background
+    const originalFilterOther = window.filterOther;
+    window.filterOther = function(category) {
+        // Change background
+        if (backgrounds[category]) {
+            bannerOther.style.background = `url('${backgrounds[category]}') no-repeat center top`;
+            bannerOther.style.backgroundSize = 'cover';
+        }
+        // Call original logic
+        if (typeof originalFilterOther === 'function') {
+            originalFilterOther(category);
+        }
+    };
+</script>
 <section id="villas" class="scrollto clearfix">
   <div class="row clearfix">
 
@@ -161,6 +182,56 @@
 
 <div id="other-services-gallery" class="row text-left scrollto clearfix">
     <!-- bagia spa -->
+     <div class="col-3 other-service-item spa" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>PACKAGE 1 - (90Mnt). 350K</h3>
+            <p>
+                - Massage  <br>
+                - Scrub <br>
+                - Aromatic Ear Candling <br>
+            </p>
+            <p>Last order 08.00 P.M<br>
+            + 21% service charge & government tax</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item spa" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>PACKAGE 2 - (120Mnt). 450K</h3>
+            <p>
+                - Massage  <br>
+                - Scrub <br>
+                - Aromatic Ear Candling <br>
+                - Body Masker <br>
+            </p>
+            <p>Last order 08.00 P.M<br>
+            + 21% service charge & government tax</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item spa" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>PACKAGE 3 - (120Mnt). 450K</h3>
+            <p>
+                - Massage  <br>
+                - Scrub <br>
+                - Aromatic Ear Candling <br>
+                - Manicure <br>
+            </p>
+            <p>Last order 08.00 P.M<br>
+            + 21% service charge & government tax</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item spa" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>PACKAGE Honeymoon - (120Mnt). 800K</h3>
+            <p>
+                - Massage  <br>
+                - Scrub <br>
+                - Flower Bath <br>
+            </p>
+            <p>Last order 08.00 P.M<br>
+            + 21% service charge & government tax</p>
+        </div>
+    </div>
     <div class="col-3 other-service-item spa" style="display:block;">
         <div class="box-other wow " data-wow-delay="0.1s">
             <h3>TREATMENTS - Balinese Massage 60Mnt.<br> 190K</h3>
@@ -231,40 +302,108 @@
             + 21% service charge & government tax</p>
         </div>
     </div>
-<!-- end spa -->
+    <!-- end spa -->
+     <!-- bagian menu -->
     <div class="col-4 other-service-item menu" style="display:block;">
         <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-            <h3>Simple Menu</h3>
-            <img src="{{ asset('storage/images/simple-menu.jpg') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
-            <p>Enjoy delicious food and drinks prepared by our chefs.</p>
+            <!-- <h3>Simple Menu</h3> -->
+            <img src="{{ asset('images/buketbeer.png') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
+            <!-- <p>Enjoy delicious food and drinks prepared by our chefs.</p> -->
         </div>
     </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Tour</h3> -->
+            <img src="{{ asset('images/buketbeer1.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <!-- <p>Discover Bali with our curated tour experiences.</p> -->
+        </div>
+    </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Tour</h3> -->
+            <img src="{{ asset('images/spaghetti.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <!-- <p>Discover Bali with our curated tour experiences.</p> -->
+        </div>
+    </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Tour</h3> -->
+            <img src="{{ asset('images/burger.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <!-- <p>Discover Bali with our curated tour experiences.</p> -->
+        </div>
+    </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Tour</h3> -->
+            <img src="{{ asset('images/pizza.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <!-- <p>Discover Bali with our curated tour experiences.</p> -->
+        </div>
+    </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Tour</h3> -->
+            <img src="{{ asset('images/calamari.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <!-- <p>Discover Bali with our curated tour experiences.</p> -->
+        </div>
+    </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Tour</h3> -->
+            <img src="{{ asset('images/satay.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <!-- <p>Discover Bali with our curated tour experiences.</p> -->
+        </div>
+    </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Tour</h3> -->
+            <img src="{{ asset('images/bbq.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <!-- <p>Discover Bali with our curated tour experiences.</p> -->
+        </div>
+    </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Tour</h3> -->
+            <img src="{{ asset('images/curry.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <!-- <p>Discover Bali with our curated tour experiences.</p> -->
+        </div>
+    </div>
+    <!-- bagian tur -->
+
     <div class="col-4 other-service-item tur" style="display:block;">
         <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
             <h3>Tour</h3>
-            <img src="{{ asset('storage/images/tour.jpg') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <img src="{{ asset('images/buketbeer1.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
             <p>Discover Bali with our curated tour experiences.</p>
         </div>
     </div>
 </div>
 
 <script>
-function filterOther(category) {
-    var items = document.querySelectorAll('.other-service-item');
-    items.forEach(function(item) {
-        if (category === 'spa' && item.classList.contains('spa')) {
-            item.style.display = 'block';
-        } else if (category === 'menu' && item.classList.contains('menu')) {
-            item.style.display = 'block';
-        } else if (category === 'tur' && item.classList.contains('tur')) {
-            item.style.display = 'block';
-        } else if (!category) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-}
+    window.onload = function() {
+        filterOther('spa');
+    };
+    function filterOther(category) {
+        var items = document.querySelectorAll('.other-service-item');
+        items.forEach(function(item) {
+            if (category === 'spa' && item.classList.contains('spa')) {
+                bannerOther.style.background = `url('${backgrounds.spa}') no-repeat center top`;
+                bannerOther.style.backgroundSize = 'cover';
+                item.style.display = 'block';
+            } else if (category === 'menu' && item.classList.contains('menu')) {
+                bannerOther.style.background = `url('${backgrounds.menu}') no-repeat center top`;
+                bannerOther.style.backgroundSize = 'cover';
+                item.style.display = 'block';
+            } else if (category === 'tur' && item.classList.contains('tur')) {
+                bannerOther.style.background = `url('${backgrounds.tur}') no-repeat center top`;
+                bannerOther.style.backgroundSize = 'cover';
+                item.style.display = 'block';
+            } else if (!category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
 </script>
 
 <!-- <script>
