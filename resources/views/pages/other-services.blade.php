@@ -304,6 +304,55 @@
     </div>
     <!-- end spa -->
      <!-- bagian menu -->
+    <div class="col-3 other-service-item menu" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>Instan Fried Noodle - Normal.  15K</h3>
+            <p>Carrot, Cabbage, Green Vegetable, Spicy / Not<br>
+            + 21% service charge & government tax</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item menu" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>Instan Fried Noodle - Special.  20K</h3>
+            <p>Carrot, Cabbage, Green Vegetable, Poached Egg, Spicy / Not<br>
+            + 21% service charge & government tax</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item menu" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>Instan Noodle Soup - Normal.  15K</h3>
+            <p>Carrot, Cabbage, Green Vegetable, Spicy / Not<br>
+            + 21% service charge & government tax</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item menu" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>Instan Noodle Soup - Special.  20K</h3>
+            <p>Carrot, Cabbage, Green Vegetable, Poached Egg, Spicy / Not<br>
+            + 21% service charge & government tax</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item menu" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>French Fries.  25K</h3>
+            <p>Served With Tomato Sauce & Mayonnaise<br>
+            + 21% service charge & government tax</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item menu" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>Chicken Nugget.  25K</h3>
+            <p>Served With Tomato Sauce & Mayonnaise<br>
+            + 21% service charge & government tax</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item menu" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>Vegetable Spring Rool.  25K</h3>
+            <p>With Mix Vegetable, Vermicelli Noodle Served With Sweet & Sour Sauce<br>
+            + 21% service charge & government tax</p>
+        </div>
+    </div>
     <div class="col-4 other-service-item menu" style="display:block;">
         <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
             <!-- <h3>Simple Menu</h3> -->
