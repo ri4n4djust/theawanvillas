@@ -120,7 +120,7 @@
     const backgrounds = {
         spa: "{{ asset('images/spa.png') }}",
         menu: "{{ asset('images/other1.png') }}",
-        tur: "{{ asset('images/other1.png') }}"
+        tur: "{{ asset('images/tur.png') }}"
     };
 
     // Patch filterOther to also change background
@@ -142,7 +142,7 @@
 
   <a onclick="filterOther('spa')" class="button">Spa </a>
   <a onclick="filterOther('menu')" class="button">Food & Beverage </a>
-  <a onclick="filterOther('tour')" class="button">Tour </a>
+  <a onclick="filterOther('tur')" class="button">Tour </a>
 
     <!-- <div class="col-3">
 
@@ -420,9 +420,65 @@
 
     <div class="col-4 other-service-item tur" style="display:block;">
         <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
-            <h3>Tour</h3>
-            <img src="{{ asset('images/buketbeer1.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
-            <p>Discover Bali with our curated tour experiences.</p>
+            <!-- <h3>Tour</h3> -->
+            <img src="{{ asset('images/ubud.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <p>Ubud City Tour start at 8:00 am and you get a Traditional balinese dance (Barong andkeris Dance), Art village (Silver smith, batik andweaving, woodcarving), Tegenungan Waterfall, Monkey forest, Swing, Lunch, Coffee plantation, Elephant cave watertemple, Tegalalang riceterrace
+                <br><strong>The Price is IDR 800.000 for 10 hour for one car. are including petrol and parking fee</strong>
+            </p>
+            <p>+6285737691010<br>
+            darma_eka89@yahoo.co.id</p>
+        </div>
+    </div>
+    <div class="col-4 other-service-item tur" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Tour</h3> -->
+            <img src="{{ asset('images/uluwatu.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <p>Uluwatu Sunset Tour start at 9:00 am and you get Nusa Dua (Watersport activity), Garuda Wisnu Kencana Big Statue in the world, Lunch, Padang2 beach, Uluwatu temple with the beautifule sunset, Traditional Balinese Dance (Kecak and fire dance/ Balinese romeo and juliet/ ramayana story), Dinner at Jimbaran bay with fresh and life, seafood (decoration with candle light dinner)
+                <br><strong>The Price is IDR 800.000 for 10 hour for one car. are including petrol and parking fee</strong>
+            </p>
+            <p>+6285737691010<br>
+            darma_eka89@yahoo.co.id</p>
+        </div>
+    </div>
+    <div class="col-4 other-service-item tur" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Tour</h3> -->
+            <img src="{{ asset('images/bedugul.png') }}" alt="Tour Service" style="width:100%;max-width:300px;">
+            <p>Bedugul and Tanah Lot Sunset Tour start at 9:00 am and you get Taman ayun temple (the royal garden temple) Tradional fresh fruite and vegetable market, Beratan lake temple, Lunch, Jati luwih rice terrace, Tanah lot temple with the beautiful Sunset
+                <br><strong>The Price is IDR 800.000 for 10 hour for one car. are including petrol and parking fee</strong>
+            </p>
+            <p>+6285737691010<br>
+            darma_eka89@yahoo.co.id</p>
+        </div>
+    </div>
+    <div class="col-4 other-service-item tur" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <h3>SPECIAL FUN ACTIVITY </h3>
+            <!-- <img src="{{ asset('images/bedugul.png') }}" alt="Tour Service" style="width:100%;max-width:300px;"> -->
+            <p>
+                1. Water Rafting <br>
+                2. ATV (Quad Bike) <br>
+                3. Elephant Riding <br>
+                4. Cycling <br>
+                5. Horse Riding <br>
+            </p>
+            <p>+6285737691010<br>
+            darma_eka89@yahoo.co.id</p>
+        </div>
+    </div>
+    <div class="col-4 other-service-item tur" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <h3>ADDITIONAL</h3>
+            <!-- <img src="{{ asset('images/bedugul.png') }}" alt="Tour Service" style="width:100%;max-width:300px;"> -->
+            <p>
+                1. Bali zoo<br>
+                2. Bali Bird Park<br>
+                3. Safari Marine<br>
+                4. Bali Treetop Adventure Park<br>
+                5. Bali Elephant Safari Park<br>
+            </p>
+            <p>+6285737691010<br>
+            darma_eka89@yahoo.co.id</p>
         </div>
     </div>
 </div>
