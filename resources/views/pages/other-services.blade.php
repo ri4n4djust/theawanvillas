@@ -303,7 +303,79 @@
         </div>
     </div>
     <!-- end spa -->
-     <!-- bagian menu -->
+    <!-- bagian menu -->
+    <!-- <div class="col-3 other-service-item menu" style="display:block;">
+        <a onclick="filterMenu('indo')" class="button">Indonesia Breakfast</a>
+        <a onclick="filterMenu('amerika')" class="button">American Breakfast</a>
+        <a onclick="filterMenu('continental')" class="button">Continental Breakfast</a>
+        <a onclick="filterMenu('vegetarian')" class="button">Vegetarian Breakfast </a>
+        <a onclick="filterMenu('sandwich')" class="button">Sandwich Menu </a>
+    </div> -->
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Simple Menu</h3> -->
+            <img src="{{ asset('images/indo.png') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
+            <!-- <p>Enjoy delicious food and drinks prepared by our chefs.</p> -->
+        </div>
+    </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Simple Menu</h3> -->
+            <img src="{{ asset('images/amerika.png') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
+            <!-- <p>Enjoy delicious food and drinks prepared by our chefs.</p> -->
+        </div>
+    </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Simple Menu</h3> -->
+            <img src="{{ asset('images/conti.png') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
+            <!-- <p>Enjoy delicious food and drinks prepared by our chefs.</p> -->
+        </div>
+    </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Simple Menu</h3> -->
+            <img src="{{ asset('images/vege.png') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
+            <!-- <p>Enjoy delicious food and drinks prepared by our chefs.</p> -->
+        </div>
+    </div>
+    <div class="col-4 other-service-item menu" style="display:block;">
+        <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h3>Simple Menu</h3> -->
+            <img src="{{ asset('images/sandwich.png') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
+            <!-- <p>Enjoy delicious food and drinks prepared by our chefs.</p> -->
+        </div>
+    </div>
+    <!-- <div class="col-3 other-service-item menu indo" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>FRIED RICE</h3>
+            <p>WITH VEGETABLE, CHICKEN ,EGG AND PRAWN CRACKER</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item menu indo" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>FRIED NOODLES</h3>
+            <p>WITH VEGETABLE, CHICKEN ,EGG AND PRAWN CRACKERS</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item menu indo" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>CHIKEN PORRIDGE</h3>
+            <p>WITH BOILED EGG,FRIED SHALLOT,CELERY,PEANUTS</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item menu indo" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>SOTO AYAM</h3>
+            <p>WITH BOILED EGG,SHREDDED,CABBAGE,CELERY ,TOMATO SLICE ,(RICE)</p>
+        </div>
+    </div>
+    <div class="col-3 other-service-item menu indo" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>SOP AYAM</h3>
+            <p>WITH POTATO,CARROT,CHICKEN,CABBAGE,CELERI,LEEK,(RICE)</p>
+        </div>
+    </div> -->
     <div class="col-3 other-service-item menu" style="display:block;">
         <div class="box-other wow " data-wow-delay="0.1s">
             <h3>Instan Fried Noodle - Normal.  15K</h3>
@@ -509,6 +581,27 @@
             }
         });
     }
+    function filterMenu(category) {
+        // Hide all menu sub-items first
+        var menuItems = document.querySelectorAll('.other-service-item.menu');
+        var subItems = document.querySelectorAll('.other-service-item.menu.indo, .other-service-item.menu.amerika, .other-service-item.menu.continental, .other-service-item.menu.vegetarian, .other-service-item.menu.sandwich');
+        subItems.forEach(function(item) {
+            item.style.display = 'none';
+        });
+
+        // Show only the selected submenu items
+        if (category) {
+            var selectedItems = document.querySelectorAll('.other-service-item.menu.' + category);
+            selectedItems.forEach(function(item) {
+                item.style.display = 'block';
+            });
+        } else {
+            // If no category, show all submenus
+            subItems.forEach(function(item) {
+                item.style.display = 'block';
+            });
+        }
+    }
 </script>
 
 <!-- <script>
@@ -539,16 +632,3 @@
 <script src="{{asset('assets/js/images-loaded.min.js')}}"></script>
 <!-- <script src="js/lightbox.min.js"></script> -->
 <script src="{{asset('assets/js/site.js')}}"></script>
-<script>
-    const popupContainer = document.getElementById('popupContainer');
-    const popupContent =
-        document.getElementById('popupContent');
-        popupContainer.addEventListener
-            ('mouseover', function () {
-                popupContent.style.display = 'block';
-            });
-        popupContainer.addEventListener
-            ('mouseout', function () {
-                popupContent.style.display = 'none';
-        });
-</script>
