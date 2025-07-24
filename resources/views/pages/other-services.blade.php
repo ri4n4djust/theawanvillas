@@ -142,6 +142,7 @@
 
   <a onclick="filterOther('spa')" class="button">Spa </a>
   <a onclick="filterOther('menu')" class="button">Food & Beverage </a>
+  <a onclick="filterOther('bf')" class="button">Breakfast </a>
   <a onclick="filterOther('tur')" class="button">Tour </a>
 
     <!-- <div class="col-3">
@@ -311,35 +312,40 @@
         <a onclick="filterMenu('vegetarian')" class="button">Vegetarian Breakfast </a>
         <a onclick="filterMenu('sandwich')" class="button">Sandwich Menu </a>
     </div> -->
-    <div class="col-4 other-service-item menu" style="display:block;">
+    <div class="col-3 other-service-item bf" style="display:block;">
+        <div class="box-other wow " data-wow-delay="0.1s">
+            <h3>Start 7.00 AM until 11.00 AM</h3>
+        </div>
+    </div>
+    <div class="col-4 other-service-item bf" style="display:block;">
         <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
             <!-- <h3>Simple Menu</h3> -->
             <img src="{{ asset('images/indo.png') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
             <!-- <p>Enjoy delicious food and drinks prepared by our chefs.</p> -->
         </div>
     </div>
-    <div class="col-4 other-service-item menu" style="display:block;">
+    <div class="col-4 other-service-item bf" style="display:block;">
         <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
             <!-- <h3>Simple Menu</h3> -->
             <img src="{{ asset('images/amerika.png') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
             <!-- <p>Enjoy delicious food and drinks prepared by our chefs.</p> -->
         </div>
     </div>
-    <div class="col-4 other-service-item menu" style="display:block;">
+    <div class="col-4 other-service-item bf" style="display:block;">
         <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
             <!-- <h3>Simple Menu</h3> -->
             <img src="{{ asset('images/conti.png') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
             <!-- <p>Enjoy delicious food and drinks prepared by our chefs.</p> -->
         </div>
     </div>
-    <div class="col-4 other-service-item menu" style="display:block;">
+    <div class="col-4 other-service-item bf" style="display:block;">
         <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
             <!-- <h3>Simple Menu</h3> -->
             <img src="{{ asset('images/vege.png') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
             <!-- <p>Enjoy delicious food and drinks prepared by our chefs.</p> -->
         </div>
     </div>
-    <div class="col-4 other-service-item menu" style="display:block;">
+    <div class="col-4 other-service-item bf" style="display:block;">
         <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
             <!-- <h3>Simple Menu</h3> -->
             <img src="{{ asset('images/sandwich.png') }}" alt="Simple Menu" style="width:100%;max-width:300px;">
@@ -567,6 +573,10 @@
                 bannerOther.style.backgroundSize = 'cover';
                 item.style.display = 'block';
             } else if (category === 'menu' && item.classList.contains('menu')) {
+                bannerOther.style.background = `url('${backgrounds.menu}') no-repeat center top`;
+                bannerOther.style.backgroundSize = 'cover';
+                item.style.display = 'block';
+            } else if (category === 'bf' && item.classList.contains('bf')) {
                 bannerOther.style.background = `url('${backgrounds.menu}') no-repeat center top`;
                 bannerOther.style.backgroundSize = 'cover';
                 item.style.display = 'block';
