@@ -24,9 +24,9 @@
             <p class="section-subtitle">
                 <i class="fa fa-phone" aria-hidden="true"></i>       +62 361 4736549 
             </p>
-            <p class="section-subtitle">
+            <!-- <p class="section-subtitle">
                 <i class="fa fa-whatsapp" aria-hidden="true"></i>      +62 878 1817 5969
-            </p>
+            </p> -->
             <!-- <p class="section-subtitle">
                 <i class="fa fa-fax" aria-hidden="true"></i>       +62 361 887877
             </p> -->
