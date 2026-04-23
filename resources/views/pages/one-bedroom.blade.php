@@ -8,39 +8,84 @@
 
 @section('content')
 
+<!-- Modal -->
+<div class="modal fade" id="trModal-login" tabindex="-1000" aria-labelledby="trModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="trModalLabel">book now</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      
+      <form cautocomplete="off">
+          <div class="row">
+              <div class="col-xl-6 form-group">
+              <input type="email" name="email-login" class="form-control" id="email-login" placeholder="Email" required>
+              </div>
+                  <div class="col-xl-6 form-group">
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+              </div>
+          </div>
+          <!-- <div class="form-group">
+              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="mobile" required>
+          </div> -->
+          <a id="button-start-demo" onclick="login()" class="btn-book-a-table">
+              Log In
+</a>
+      </form>
 
+        
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
 
 <!--Villa-->
 <section id="villas" class="scrollto clearfix">
   <div class="row clearfix">
 
+  <!-- Trigger Button -->
+
+
+
+
         <div class="col-1">
 
             <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
                 <h2 style="font-family:'MAIAN';">One Bedroom Villas with Private Pool</h2>
+                <button id="openBtn" class="button">Book Now</button>
                 <p class="section-subtitle" >Experience the ultimate in luxury and relaxation in our stunning One Bedroom Villas with Private Pool.</p>
+               
+
                 <div class="col-3">
-                    <img src="/assets/images/icon/pool.png" alt="Company"/><br>
+                    <img src="/assets/images/icon/pool.png" alt="Pool"/><br>
                     <span>Private Pool Size: 7m x 3m x 1,5m</span>
                 </div>
                 <div class="col-3">
-                <img src="/assets/images/icon/wifi.png" alt="Pool"/><br>
+                <img src="/assets/images/icon/wifi.png" alt="wifi"/><br>
                     <span>High Spped Wifi</span>
                 </div>
                 <div class="col-3">
-                <img src="/assets/images/icon/villa.png" alt="Pool"/><br>
+                <img src="/assets/images/icon/villa.png" alt="Villa"/><br>
                     <span>Villa Size 180 sqm</span>
                 </div>
                 <div class="col-3">
-                <img src="/assets/images/icon/plug.png" alt="Pool"/><br>
+                <img src="/assets/images/icon/plug.png" alt="Plug"/><br>
                     <span>Electrical Voltase 220V</span>
                 </div>
                 <div class="col-3">
-                <img src="/assets/images/icon/bed.png" alt="Pool"/><br>
+                <img src="/assets/images/icon/bed.png" alt="Bed"/><br>
                     <span>Bedroom 5m x 5m</span>
                 </div>
                 <div class="col-3">
-                <img src="/assets/images/icon/door.png" alt="Pool"/><br>
+                <img src="/assets/images/icon/door.png" alt="Door"/><br>
                     <span>Living Room 3,2m x 7,30m</span>
                 </div>
             </div>
@@ -87,7 +132,105 @@
 </section>
 <!--End of Villa-->
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg">
+        <h2 class="text-xl font-bold mb-4">Book Your Hotel</h2>
 
+        <form  class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium">Name</label>
+                <input type="text" wire:model="name" class="w-full border rounded px-3 py-2">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium">Email</label>
+                <input type="email" wire:model="email" class="w-full border rounded px-3 py-2">
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium">Check-in</label>
+                    <input type="date" wire:model="check_in" class="w-full border rounded px-3 py-2">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium">Check-out</label>
+                    <input type="date" wire:model="check_out" class="w-full border rounded px-3 py-2">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium">Guests</label>
+                <input type="number" wire:model="guests" min="1" class="w-full border rounded px-3 py-2">
+            </div>
+
+            <div class="flex justify-end space-x-2">
+                <button type="button" @click="open = false"
+                        class="px-4 py-2 bg-gray-300 rounded">Cancel</button>
+                <button type="submit"
+                        class="px-4 py-2 bg-blue-600 text-white rounded">Confirm Booking</button>
+            </div>
+        </form>
+    </div>
+
+
+  </div>
+</div>
+<script>
+    const modal = document.getElementById("myModal");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.querySelector(".close-btn");
+
+// Open modal
+openBtn.onclick = () => {
+  modal.style.display = "block";
+}
+
+// Close modal via button
+closeBtn.onclick = () => {
+  modal.style.display = "none";
+}
+
+// Close modal by clicking outside the box
+window.onclick = (event) => {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
+<style>
+/* The background overlay */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.5); /* Black with opacity */
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: white;
+  margin: 15% auto; 
+  padding: 20px;
+  width: 80%;
+  border-radius: 8px;
+}
+
+/* Close button */
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+</style>
 
 <!--Content Section-->
 <div id="services" class="scrollto clearfix">
