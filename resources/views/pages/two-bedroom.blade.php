@@ -16,6 +16,8 @@
         
         <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
             <h2 style="font-family:'MAIAN';">Two Bedroom Villas with Private Pool</h2>
+            <button id="openBtn" class="button">Book Now</button>
+            <a href="https://api.whatsapp.com/send?phone=6281353664677&text=One Bedroom Villas with Private Pool&source=&data=" class="button" target="_blank">Chat with Us</a>
             <p class="section-subtitle" >Experience the ultimate in luxury and relaxation in our stunning One Bedroom Villas with Private Pool.</p>
             <div class="col-3">
                 <img src="/assets/images/icon/pool.png" alt="Company"/><br>
@@ -84,6 +86,42 @@
   </div>
 </section>
 <!--End of Villa-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg">
+        <h2 class="text-xl font-bold mb-4">Book Your Villa</h2>
+
+        <form action="{{ route('booking') }}" method="POST" class="booking-form">
+            @csrf
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            <input type="hidden" id="room" name="room" value="Two Bedroom Villa" readonly>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="adult">Number of Guests</label>
+            <input type="number" id="adult" name="adult" min="1" max="10" required>
+
+            <label for="checkin">Check-In Date</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <label for="checkout">Check-Out Date</label>
+            <input type="date" id="checkout" name="checkout" required>
+
+            <label for="requests">Special Requests</label>
+            <textarea id="requests" name="requests" placeholder="e.g. Late check-in, extra pillows"></textarea>
+
+            <button type="submit" id="submitBtn" class="button">Book Now</button>
+        </form>
+
+    </div>
+
+
+  </div>
+</div>
 
 <!--Content Section-->
 <div id="services" class="scrollto clearfix">

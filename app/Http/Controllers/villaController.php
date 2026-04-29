@@ -7,6 +7,7 @@ use App\Models\Promo;
 use App\Models\Page;
 use Illuminate\Support\Facades\DB;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Illuminate\Support\Facades\Http;
 
 
 class villaController extends Controller
@@ -94,6 +95,49 @@ class villaController extends Controller
 
         $pages = Page::where('slug', 'about-us')->first();
         return view('pages.other-services', compact('pages'));
+    }
+
+    public function booking(Request $request){
+
+        $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => config('services.recaptcha.secret_key'),
+            'response' => $request->input('recaptcha_token'),
+        ]);
+
+        $data = $response->json();
+
+        if (!($data['success'] ?? false) || ($data['score'] ?? 0) < 0.5) {
+            return back()->withErrors(['recaptcha' => 'reCAPTCHA validation failed.']);
+        }
+
+        \Mail::send('pages.email-booking', array(
+                'name' => $request->name,
+                'email' => $request->email,
+                'room' => $request->room,
+                'cek_in' => $request->checkin,
+                'cek_out' => $request->checkout,
+                'adult' => $request->adult,
+                'requests' => $request->requests,
+                'nights' => \Carbon\Carbon::parse($request->checkin)->diffInDays(\Carbon\Carbon::parse($request->checkout))
+            ), function($message) use ($request){
+                // $message->from($request->email);
+                $message->to('info@winmaxbali.id', 'No-replay')->from($request->email, $request->name)->subject('Booking Inquiry');
+                // $message->to($request->email, $request->name)->subject('Booking Confirm');
+            });
+        // \Mail::send('pages.email-booking', array(
+        //         'name' => $request->name,
+        //         'email' => $request->email,
+        //         'cek_in' => $request->checkin,
+        //         'cek_out' => $request->checkout,
+        //         'adult' => $request->adult,
+        //         'requests' => $request->requests,
+        //         'nights' => \Carbon\Carbon::parse($request->checkin)->diffInDays(\Carbon\Carbon::parse($request->checkout))
+        //     ), function($message) use ($request){
+        //         // $message->from($request->email);
+        //         // $message->to('info@winmaxbali.id', 'No-replay')->from($request->email, $request->name)->subject('Booking Inquiry');
+        //         $message->to($request->email, $request->name)->subject('Booking Inquiry');
+        //     });
+        return redirect()->back()->with('success', 'Booking request sent successfully!');
     }
 
 }
