@@ -17,8 +17,8 @@
         <div class="box-villas wow fadeInUp" data-wow-delay="0.1s">
             <h2 style="font-family:'MAIAN';">Two Bedroom Villas with Private Pool</h2>
             <button id="openBtn" class="button">Book Now</button>
-            <a href="https://api.whatsapp.com/send?phone=6281353664677&text=One Bedroom Villas with Private Pool&source=&data=" class="button" target="_blank">Chat with Us</a>
-            <p class="section-subtitle" >Experience the ultimate in luxury and relaxation in our stunning One Bedroom Villas with Private Pool.</p>
+            <a href="https://api.whatsapp.com/send?phone=6281353664677&text=Two Bedroom Villas with Private Pool&source=&data=" class="button" target="_blank">Chat with Us</a>
+            <p class="section-subtitle" >Experience the ultimate in luxury and relaxation in our stunning Two Bedroom Villas with Private Pool.</p>
             <div class="col-3">
                 <img src="/assets/images/icon/pool.png" alt="Company"/><br>
                 <span>Private Pool Size: 7m x 3m x 1,5m</span>
